@@ -1,0 +1,12 @@
+<map id="decode_jpeg_header" name="decode_jpeg_header">
+<area shape="rect" id="node2" href="$stb__image_8cpp.html#a9d57b6044b52a189c3a739c893f853d5" title="get_marker" alt="" coords="229,31,315,57"/>
+<area shape="rect" id="node6" href="$stb__image_8cpp.html#a887e3ec890d7b9459eda3bba57f61336" title="process_marker" alt="" coords="215,107,329,133"/>
+<area shape="rect" id="node10" href="$stb__image_8cpp.html#ab31358888a33f78e7aa94da17114d8ce" title="at_eof" alt="" coords="243,157,301,184"/>
+<area shape="rect" id="node11" href="$stb__image_8cpp.html#a08ddba3fe4478391f1b9cc809b4aa1de" title="process_frame_header" alt="" coords="195,208,349,235"/>
+<area shape="rect" id="node3" href="$stb__image_8cpp.html#a8ab33004ad51977319641ade6494ec19" title="get8u" alt="" coords="422,5,477,32"/>
+<area shape="rect" id="node4" href="$stb__image_8cpp.html#ae7d89884c32f0eb6edd8e7369031ae13" title="get8" alt="" coords="550,132,597,159"/>
+<area shape="rect" id="node5" href="$stb__image_8cpp.html#ace61fc7f5daabdb6dc0d60813346901a" title="refill_buffer" alt="" coords="646,132,733,159"/>
+<area shape="rect" id="node7" href="$stb__image_8cpp.html#aa6f16d004643ea5c5c38c7198dc25141" title="get16" alt="" coords="422,208,477,235"/>
+<area shape="rect" id="node8" href="$stb__image_8cpp.html#a0749b05104242b2963cabc0c7079d421" title="build_huffman" alt="" coords="398,107,501,133"/>
+<area shape="rect" id="node9" href="$stb__image_8cpp.html#a70132eb48871f2c3668bbd478eb2748c" title="skip" alt="" coords="426,157,473,184"/>
+</map>

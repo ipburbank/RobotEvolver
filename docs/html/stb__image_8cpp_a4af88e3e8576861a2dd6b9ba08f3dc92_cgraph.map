@@ -1,0 +1,37 @@
+<map id="stbi_png_load" name="stbi_png_load">
+<area shape="rect" id="node2" href="$stb__image_8cpp.html#aa6125314826565eb7db02d6adc236c00" title="do_png" alt="" coords="157,428,221,455"/>
+<area shape="rect" id="node3" href="$stb__image_8cpp.html#a61e5579b6b3b358971e7f68442f4f20a" title="parse_png_file" alt="" coords="271,335,377,361"/>
+<area shape="rect" id="node35" href="$stb__image_8cpp.html#a1d5e25109b08f7b9fd29d0748591e4c8" title="convert_format" alt="" coords="269,520,379,547"/>
+<area shape="rect" id="node4" href="$stb__image_8cpp.html#a0686537908db03e8dc1d7c1ac0d57667" title="check_png_header" alt="" coords="444,107,575,133"/>
+<area shape="rect" id="node5" href="$stb__image_8cpp.html#a8ab33004ad51977319641ade6494ec19" title="get8u" alt="" coords="691,107,746,133"/>
+<area shape="rect" id="node6" href="$stb__image_8cpp.html#ae7d89884c32f0eb6edd8e7369031ae13" title="get8" alt="" coords="1037,183,1083,209"/>
+<area shape="rect" id="node8" href="$stb__image_8cpp.html#a3fa1c17098aeba2fac9371c1c7e3ae60" title="get_chunk_header" alt="" coords="445,259,573,285"/>
+<area shape="rect" id="node9" href="$stb__image_8cpp.html#af0cf46c0fd30cf9aa5478c5e59cabdce" title="get32" alt="" coords="691,208,746,235"/>
+<area shape="rect" id="node10" href="$stb__image_8cpp.html#aa6f16d004643ea5c5c38c7198dc25141" title="get16" alt="" coords="859,183,914,209"/>
+<area shape="rect" id="node11" href="$stb__image_8cpp.html#a70132eb48871f2c3668bbd478eb2748c" title="skip" alt="" coords="486,360,533,387"/>
+<area shape="rect" id="node12" href="$stb__image_8cpp.html#a8780812d8f19a042ef706fcf49ccf125" title="getn" alt="" coords="486,411,533,437"/>
+<area shape="rect" id="node13" href="$stb__image_8cpp.html#a73353bd7f46b396392af3e315d46f237" title="stbi_zlib_decode_malloc\l_guesssize_headerflag" alt="" coords="427,462,591,503"/>
+<area shape="rect" id="node29" href="$stb__image_8cpp.html#ad098b9443bb74e9899ddfffebb29f78f" title="create_png_image" alt="" coords="445,528,573,555"/>
+<area shape="rect" id="node32" href="$stb__image_8cpp.html#af129fa5fc2773c9071f369aa3607e404" title="compute_transparency" alt="" coords="432,579,587,605"/>
+<area shape="rect" id="node33" href="$stb__image_8cpp.html#a21cf0ae50aa9eab8e20aac256697bc82" title="stbi_de_iphone" alt="" coords="455,629,564,656"/>
+<area shape="rect" id="node34" href="$stb__image_8cpp.html#ac28bcf2696ea8c5aa5b7ac81bc1239bf" title="expand_palette" alt="" coords="454,5,565,32"/>
+<area shape="rect" id="node7" href="$stb__image_8cpp.html#ace61fc7f5daabdb6dc0d60813346901a" title="refill_buffer" alt="" coords="1211,183,1298,209"/>
+<area shape="rect" id="node14" href="$stb__image_8cpp.html#ad84433b6290d3d64e451cd557cedcae1" title="do_zlib" alt="" coords="687,469,750,496"/>
+<area shape="rect" id="node15" href="$stb__image_8cpp.html#affe59d7d7941bfc9d3a4efbb7970302b" title="parse_zlib" alt="" coords="846,469,927,496"/>
+<area shape="rect" id="node16" href="$stb__image_8cpp.html#a31d317cc8be21d578d0248d1cf7ca3ae" title="parse_zlib_header" alt="" coords="1366,355,1493,381"/>
+<area shape="rect" id="node18" href="$stb__image_8cpp.html#a142a17daf34c0edfbc095f8fa8efd847" title="zreceive" alt="" coords="1219,508,1290,535"/>
+<area shape="rect" id="node20" href="$stb__image_8cpp.html#a9b6c50bd1c55e659448e454effa99830" title="parse_uncompressed\l_block" alt="" coords="987,403,1133,445"/>
+<area shape="rect" id="node22" href="$stb__image_8cpp.html#adaf0e04594c8d1dbdc0ef45b20da99ab" title="init_defaults" alt="" coords="1014,301,1106,328"/>
+<area shape="rect" id="node23" href="$stb__image_8cpp.html#a72ef91abaf0df742fce9c4e364c6d060" title="zbuild_huffman" alt="" coords="1199,609,1310,636"/>
+<area shape="rect" id="node26" href="$stb__image_8cpp.html#a240f5714b196a862e52f2cf6e9a21bbe" title="compute_huffman_codes" alt="" coords="976,571,1144,597"/>
+<area shape="rect" id="node28" href="$stb__image_8cpp.html#a494a781bd215df3273e17813a2d473d7" title="parse_huffman_block" alt="" coords="987,520,1133,547"/>
+<area shape="rect" id="node17" href="$stb__image_8cpp.html#a2ebb84646380f0e78bda46dce59201f4" title="zget8" alt="" coords="1561,407,1615,433"/>
+<area shape="rect" id="node19" href="$stb__image_8cpp.html#a304a55b32f2e788727af78e089685c23" title="fill_bits" alt="" coords="1398,508,1461,535"/>
+<area shape="rect" id="node21" href="$stb__image_8cpp.html#a934741686cd586d3d57c9e73c5155790" title="expand" alt="" coords="1223,457,1287,484"/>
+<area shape="rect" id="node24" href="$stb__image_8cpp.html#a47c6813ede053cd166e42770217deac1" title="bit_reverse" alt="" coords="1386,584,1473,611"/>
+<area shape="rect" id="node25" href="$stb__image_8cpp.html#ac4c294ebd942640259201ef8fe28306a" title="bitreverse16" alt="" coords="1541,584,1635,611"/>
+<area shape="rect" id="node27" href="$stb__image_8cpp.html#ad2f594a73d27a89d1d38086be10b3b3d" title="zhuffman_decode" alt="" coords="1192,559,1317,585"/>
+<area shape="rect" id="node30" href="$stb__image_8cpp.html#aa9e3bd5864e9aa511e27cc3b84d9d076" title="create_png_image_raw" alt="" coords="641,528,797,555"/>
+<area shape="rect" id="node31" href="$stb__image_8cpp.html#ac8659019a007e793979ae2d9da0633a5" title="paeth" alt="" coords="859,528,914,555"/>
+<area shape="rect" id="node36" href="$stb__image_8cpp.html#afef9f8f44dd22cf7222c0553824d4f4f" title="compute_y" alt="" coords="466,680,553,707"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="stbi_gif_header" name="stbi_gif_header">
+<area shape="rect" id="node2" href="$stb__image_8cpp.html#ae7d89884c32f0eb6edd8e7369031ae13" title="get8" alt="" coords="494,29,541,55"/>
+<area shape="rect" id="node4" href="$stb__image_8cpp.html#a8ab33004ad51977319641ade6494ec19" title="get8u" alt="" coords="386,29,441,55"/>
+<area shape="rect" id="node5" href="$stb__image_8cpp.html#aeef53f9c6b757791340b398119198b83" title="get16le" alt="" coords="381,91,445,118"/>
+<area shape="rect" id="node6" href="$stb__image_8cpp.html#a40f6ab16ff132d5c4442b6b8878d5087" title="stbi_gif_parse_colortable" alt="" coords="166,54,333,81"/>
+<area shape="rect" id="node3" href="$stb__image_8cpp.html#ace61fc7f5daabdb6dc0d60813346901a" title="refill_buffer" alt="" coords="590,29,677,55"/>
+</map>
