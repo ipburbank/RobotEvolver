@@ -1,6 +1,7 @@
 var NAVTREE =
 [
   [ "RobotEvolver", "index.html", [
+    [ "README", "md_README.html", null ],
     [ "Data Structures", null, [
       [ "Data Structures", "annotated.html", "annotated" ],
       [ "Data Structure Index", "classes.html", null ],
@@ -29,10 +30,10 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "BunnyMesh_8h.html",
-"classDemoApplication.html#a325cdc9670aac2180a783c08629f6e29",
-"functions_c.html",
-"stb__image_8cpp.html#ab33e40eedec8923b099b0262b5784173",
-"structstbi__gif__lzw__struct.html#a08129c445d56c0983285d6e0e71b83bd"
+"classDemoApplication.html#aafce7de1b2b3a7469de8b96b39268fb3",
+"functions_vars_z.html",
+"stb__image_8cpp.html#ad8a69f768ddc2a2e8e04c9f727c73fb7",
+"structzhuffman.html#a12d5f92a121b65680e5f0b4027d00c96"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

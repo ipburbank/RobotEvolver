@@ -24,10 +24,6 @@ var hierarchy =
     [ "GL_DialogWindow", "classGL__DialogWindow.html", null ],
     [ "GL_ShapeDrawer", "classGL__ShapeDrawer.html", null ],
     [ "huffman", "structhuffman.html", null ],
-    [ "IControl", null, [
-      [ "MotorControl", "structMotorControl.html", null ],
-      [ "SteerControl", "structSteerControl.html", null ]
-    ] ],
     [ "ImplicitFn", null, [
       [ "ImplicitSphere", "structImplicitSphere.html", null ]
     ] ],

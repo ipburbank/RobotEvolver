@@ -23,7 +23,6 @@ var searchData=
   ['png',['png',['../structpng.html',1,'']]],
   ['png_5ftype',['PNG_TYPE',['../stb__image_8cpp.html#acaff58a0e5160754a6b6afbefff148f9',1,'stb_image.cpp']]],
   ['prefix',['prefix',['../structstbi__gif__lzw__struct.html#a0e5142cb4117b905eb9efd73c436525c',1,'stbi_gif_lzw_struct']]],
-  ['prepare',['Prepare',['../structSteerControl.html#a563b4140435625017a4572de2c653cae',1,'SteerControl']]],
   ['process_5fframe_5fheader',['process_frame_header',['../stb__image_8cpp.html#a08ddba3fe4478391f1b9cc809b4aa1de',1,'stb_image.cpp']]],
   ['process_5fmarker',['process_marker',['../stb__image_8cpp.html#a887e3ec890d7b9459eda3bba57f61336',1,'stb_image.cpp']]],
   ['process_5fscan_5fheader',['process_scan_header',['../stb__image_8cpp.html#aa1534bb7c68f06c60a76e03d9fc14889',1,'stb_image.cpp']]],

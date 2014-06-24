@@ -15,7 +15,6 @@ var searchData=
   ['pic_5ftest',['pic_test',['../stb__image_8cpp.html#ae2fdc273eac2e599e8427010ea5be751',1,'stb_image.cpp']]],
   ['pickingpretickcallback',['pickingPreTickCallback',['../SoftDemo_8cpp.html#ae5a1f67485787a497f987f086af9d7ce',1,'SoftDemo.cpp']]],
   ['pickobject',['pickObject',['../classDemoApplication.html#a7415f7abc632678e0f5c6421c8c661bb',1,'DemoApplication']]],
-  ['prepare',['Prepare',['../structSteerControl.html#a563b4140435625017a4572de2c653cae',1,'SteerControl']]],
   ['process_5fframe_5fheader',['process_frame_header',['../stb__image_8cpp.html#a08ddba3fe4478391f1b9cc809b4aa1de',1,'stb_image.cpp']]],
   ['process_5fmarker',['process_marker',['../stb__image_8cpp.html#a887e3ec890d7b9459eda3bba57f61336',1,'stb_image.cpp']]],
   ['process_5fscan_5fheader',['process_scan_header',['../stb__image_8cpp.html#aa1534bb7c68f06c60a76e03d9fc14889',1,'stb_image.cpp']]],

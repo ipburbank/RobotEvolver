@@ -99,7 +99,6 @@ var searchData=
   ['gnummanifold',['gNumManifold',['../SoftDemo_8cpp.html#a0fbe3a4e014bfe18ca81951826d5cda9',1,'SoftDemo.cpp']]],
   ['gnumobjects',['gNumObjects',['../SoftDemo_8cpp.html#a387a322d32830cacbf4c7d405a59b4b1',1,'SoftDemo.cpp']]],
   ['gnumsplitimpulserecoveries',['gNumSplitImpulseRecoveries',['../DemoApplication_8cpp.html#ae73bff8491455ee3dcfe937fc4d5c7ac',1,'DemoApplication.cpp']]],
-  ['goal',['goal',['../structMotorControl.html#a75316625fc64f41e2d8d0f723b425eea',1,'MotorControl']]],
   ['goldpickingdist',['gOldPickingDist',['../DemoApplication_8cpp.html#a8c5695384dc41c02c1ad8bc8d5c0d632',1,'gOldPickingDist():&#160;DemoApplication.cpp'],['../GL__DialogDynamicsWorld_8cpp.html#a8c5695384dc41c02c1ad8bc8d5c0d632',1,'gOldPickingDist():&#160;GL_DialogDynamicsWorld.cpp']]],
   ['goldpickingpos',['gOldPickingPos',['../DemoApplication_8cpp.html#a8362b8a2dee238f2979c3033103f00c1',1,'gOldPickingPos():&#160;DemoApplication.cpp'],['../GL__DialogDynamicsWorld_8cpp.html#a8362b8a2dee238f2979c3033103f00c1',1,'gOldPickingPos():&#160;GL_DialogDynamicsWorld.cpp']]],
   ['goverlappingpairs',['gOverlappingPairs',['../SoftDemo_8cpp.html#a76a7c7b1dc927bf1715c6bf0f772f816',1,'SoftDemo.cpp']]],

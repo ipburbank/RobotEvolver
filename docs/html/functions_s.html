@@ -44,6 +44,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -128,7 +129,7 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -211,9 +212,6 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 <li>showProfileInfo()
 : <a class="el" href="classDemoApplication.html#a325cdc9670aac2180a783c08629f6e29">DemoApplication</a>
 </li>
-<li>sign
-: <a class="el" href="structSteerControl.html#aaea33bcc534ecfd3724f3d82bee9e261">SteerControl</a>
-</li>
 <li>size
 : <a class="el" href="structhuffman.html#afdb0fbcf25aec42ba30b0d0e2453a057">huffman</a>
 , <a class="el" href="structpic__packet__t.html#ad33021e40c272a20d89bdcceabb20a71">pic_packet_t</a>
@@ -231,10 +229,6 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 <li>specialKeyboardUp()
 : <a class="el" href="classDemoApplication.html#aec8da43197c436aec9f474b03774b2a2">DemoApplication</a>
 </li>
-<li>Speed()
-: <a class="el" href="structMotorControl.html#a69c6bcdaab0ebde877ebd8f5de0be468">MotorControl</a>
-, <a class="el" href="structSteerControl.html#ac268afd2f30928603ef7abfee596d3d0">SteerControl</a>
-</li>
 <li>sqradius
 : <a class="el" href="structImplicitSphere.html#ae6e89cf187fb2db2643383214ce0b3e1">ImplicitSphere</a>
 </li>
@@ -243,9 +237,6 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 </li>
 <li>start_y
 : <a class="el" href="structstbi__gif__struct.html#a7f4974b80d6e6f4f56b5fd02a9c1c121">stbi_gif_struct</a>
-</li>
-<li>SteerControl()
-: <a class="el" href="structSteerControl.html#a65f331a85db61db78d175a4d3da06632">SteerControl</a>
 </li>
 <li>step
 : <a class="el" href="structstbi__gif__struct.html#a61556e0a3ff8f19fa80401de5da1f079">stbi_gif_struct</a>
@@ -274,7 +265,7 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sat Jun 21 2014 13:44:37 for RobotEvolver by
+    <li class="footer">Generated on Sun Jun 22 2014 15:11:24 for RobotEvolver by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
   </ul>

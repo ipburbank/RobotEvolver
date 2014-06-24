@@ -1,5 +1,5 @@
 all:
-	g++ -o bin/native/softapp -O3 -I/usr/local/include/bullet -I/usr/local/lib \
+	g++ -o bin/Native/softapp -O3 -I/usr/local/include/bullet -I/usr/local/lib \
 	-lglut -lGL -lGLU \
 	BulletDemoFiles/DemoApplication.cpp \
 	BulletDemoFiles/GLDebugFont.cpp BulletDemoFiles/GlutDemoApplication.cpp BulletDemoFiles/GL_ShapeDrawer.cpp  \
