@@ -159,7 +159,7 @@ public:\
 
 MACRO_SOFT_DEMO(0) //Init_Volume
 MACRO_SOFT_DEMO(1) //Init_Pressure
-
+MACRO_SOFT_DEMO(2) //Init_CustomCube
 
 #endif //CCD_PHYSICS_DEMO_H
 

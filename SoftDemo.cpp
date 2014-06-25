@@ -326,7 +326,6 @@ struct	TetraCube
 #include "Meshes/cube.inl"
 };
 
-
 //
 // Random
 //
@@ -432,37 +431,40 @@ static void Init_TetraCube(SoftDemo* pdemo)
 	pdemo->m_cutting=false;	
 }
 
+static btSoftBody* Ctor_SoftBox(SoftDemo* pdemo)
+{
+        const btVector3	c[]={
+                btVector3(-1,-1,-1),
+	        btVector3(+1,-1,-1),
+		btVector3(-1,+1,-1),
+		btVector3(+1,+1,-1),
+		btVector3(-1,-1,+1),
+		btVector3(+1,-1,+1),
+		btVector3(-1,+1,+1),
+		btVector3(+1,+1,+1)
+        };
+	btSoftBody* psb=btSoftBodyHelpers::CreateFromConvexHull(pdemo->m_softBodyWorldInfo,c,8, true);
+	//psb->generateBendingConstraints(2);
+
+	return psb;
+
+}
 
 //
 // Custom Cube
 //
 static void Init_CustomCube(SoftDemo* pdemo)
 {
-	btConvexShape* childShape0 = new btBoxShape(btVector3(btScalar(1),btScalar(1),btScalar(0.04)));
+        
+	btSoftBody* psb=Ctor_SoftBox(pdemo);
 
-
-	
+        psb->m_materials[0]->m_kLST	=	0.45;
+	psb->m_cfg.kVC			=	20;
+	psb->setTotalMass(50,true);
+	psb->setPose(true,false);
 	pdemo->getSoftDynamicsWorld()->addSoftBody(psb);
-	psb->scale(btVector3(4,4,4));
-	psb->translate(btVector3(0,5,0));
-	psb->setVolumeMass(300);
-	
-	
-	///fix one vertex
-	//psb->setMass(0,0);
-	//psb->setMass(10,0);
-	//psb->setMass(20,0);
-	psb->m_cfg.piterations=1;
-	//psb->generateClusters(128);
-	psb->generateClusters(16);
-	//psb->getCollisionShape()->setMargin(0.5);
 
-	psb->getCollisionShape()->setMargin(0.01);
-	psb->m_cfg.collisions	=	btSoftBody::fCollision::CL_SS+	btSoftBody::fCollision::CL_RS
-		//+ btSoftBody::fCollision::CL_SELF
-		;
-	psb->m_materials[0]->m_kLST=0.8;
-	pdemo->m_cutting=false;	
+	pdemo->m_autocam=true;
 }
 
 
@@ -471,7 +473,8 @@ static void Init_CustomCube(SoftDemo* pdemo)
 void (*demofncs[])(SoftDemo*)=
 {
 	Init_Volume,
-	Init_TetraCube
+	Init_TetraCube,
+	Init_CustomCube
 };
 
 void	SoftDemo::clientResetScene()
