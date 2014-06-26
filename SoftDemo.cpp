@@ -441,9 +441,15 @@ static btSoftBody* Ctor_SoftBox(SoftDemo* pdemo)
 		btVector3(-1,-1,+1),
 		btVector3(+1,-1,+1),
 		btVector3(-1,+1,+1),
-		btVector3(+1,+1,+1)
+		btVector3(+1,+1,+1),
+                btVector3(1,0,0),
+                btVector3(-1,0,0),
+                btVector3(0,1,0),
+                btVector3(0,-1,0),
+                btVector3(0,0,1),
+                btVector3(0,0,-1)
         };
-	btSoftBody* psb=btSoftBodyHelpers::CreateFromConvexHull(pdemo->m_softBodyWorldInfo,c,8, true);
+	btSoftBody* psb=btSoftBodyHelpers::CreateFromConvexHull(pdemo->m_softBodyWorldInfo,c,14, true);
 	//psb->generateBendingConstraints(2);
 
 	return psb;
@@ -458,10 +464,18 @@ static void Init_CustomCube(SoftDemo* pdemo)
         
 	btSoftBody* psb=Ctor_SoftBox(pdemo);
 
-        psb->m_materials[0]->m_kLST	=	0.45;
+
+	psb->m_cfg.piterations=1;
+	
+	psb->generateClusters(4);
+	psb->getCollisionShape()->setMargin(0.01);
+	pdemo->m_cutting=false;	
+
+
+        psb->m_materials[0]->m_kLST	=	0.15;
 	psb->m_cfg.kVC			=	20;
 	psb->setTotalMass(50,true);
-	psb->setPose(true,false);
+	psb->setPose(true,false); //try to return to the 'lowest energy state'
 	pdemo->getSoftDynamicsWorld()->addSoftBody(psb);
 
 	pdemo->m_autocam=true;
