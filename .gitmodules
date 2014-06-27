@@ -4,3 +4,6 @@
 [submodule "Bullet/bullet3"]
 	path = Bullet/bullet3
 	url = https://github.com/bulletphysics/bullet3.git
+[submodule "umeshu"]
+	path = umeshu
+	url = https://github.com/vladimir-ch/umeshu.git
