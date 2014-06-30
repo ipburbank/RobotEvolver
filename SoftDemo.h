@@ -29,6 +29,7 @@ subject to the following restrictions:
 #include "LinearMath/btAlignedObjectArray.h"
 #include "BulletSoftBody/btSoftBody.h"
 
+#include "Meshes/MeshTools.h"
 
 class btBroadphaseInterface;
 class btCollisionShape;
@@ -38,7 +39,7 @@ class btConstraintSolver;
 struct btCollisionAlgorithmCreateFunc;
 class btDefaultCollisionConfiguration;
 
-///collisions between two btSoftBody's
+///collisions between two btSoftBodys
 class btSoftSoftCollisionAlgorithm;
 
 ///collisions between a btSoftBody and a btRigidBody

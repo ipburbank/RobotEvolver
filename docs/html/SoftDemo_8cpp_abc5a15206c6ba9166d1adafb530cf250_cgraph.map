@@ -1,5 +1,0 @@
-<map id="Init_Pressure" name="Init_Pressure">
-<area shape="rect" id="node2" href="$classSoftDemo.html#a0ab9c8a0fd1df67589aaf842568941f1" title="SoftDemo::getSoftDynamics\lWorld" alt="" coords="153,5,343,46"/>
-<area shape="rect" id="node3" href="$SoftDemo_8cpp.html#a522a6c6169c3ae36b99541e8aeb05b0d" title="Ctor_BigPlate" alt="" coords="197,71,299,97"/>
-<area shape="rect" id="node4" href="$SoftDemo_8cpp.html#af718458d9a8c51dd24bb7da7be72bcf7" title="Ctor_LinearStair" alt="" coords="190,121,306,148"/>
-</map>

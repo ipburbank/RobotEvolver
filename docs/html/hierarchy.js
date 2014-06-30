@@ -28,6 +28,7 @@ var hierarchy =
       [ "ImplicitSphere", "structImplicitSphere.html", null ]
     ] ],
     [ "jpeg", "structjpeg.html", null ],
+    [ "MeshTools", "classMeshTools.html", null ],
     [ "pic_packet_t", "structpic__packet__t.html", null ],
     [ "PlatformDemoApplication", null, [
       [ "SoftDemo", "classSoftDemo.html", null ]

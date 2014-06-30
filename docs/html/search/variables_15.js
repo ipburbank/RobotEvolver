@@ -1,11 +1,11 @@
 var searchData=
 [
-  ['z_5fdistance',['z_distance',['../structzbuf.html#ae7d9588b2548708e14f3c6ad89bf26b5',1,'zbuf']]],
-  ['z_5fexpandable',['z_expandable',['../structzbuf.html#ae662f24e0973ca19b543e64647a6bfb6',1,'zbuf']]],
-  ['z_5flength',['z_length',['../structzbuf.html#a5906bdbe9dfb565339acac51af9efe89',1,'zbuf']]],
-  ['zbuffer',['zbuffer',['../structzbuf.html#a7080eb91dcc67e1dfe818d08e6f22c4e',1,'zbuf']]],
-  ['zbuffer_5fend',['zbuffer_end',['../structzbuf.html#af030baa17bebedd18272678da17a33f4',1,'zbuf']]],
-  ['zout',['zout',['../structzbuf.html#aaf137c25fa5b9fb14e92354da4203c38',1,'zbuf']]],
-  ['zout_5fend',['zout_end',['../structzbuf.html#af07c0b7b7227f670ee1413bc0dcab791',1,'zbuf']]],
-  ['zout_5fstart',['zout_start',['../structzbuf.html#af31571e8d74c78c9bb18d92205150b28',1,'zbuf']]]
+  ['umbrellas_5f',['umbrellas_',['../classOpenMesh_1_1Smoother_1_1JacobiLaplaceSmootherT.html#a98f676b3a957fc3e5f0d97e6428e3f60',1,'OpenMesh::Smoother::JacobiLaplaceSmootherT']]],
+  ['unknownsize',['UnknownSize',['../classOpenMesh_1_1BaseProperty.html#a3dbccc1d0ac8f9a0ba27c46f2fe58414',1,'OpenMesh::BaseProperty']]],
+  ['unused_5f',['unused_',['../structOpenMesh_1_1IO_1_1OMFormat_1_1Chunk_1_1Header.html#a0d720325dfb709a9f66e9e6bd4429ec2',1,'OpenMesh::IO::OMFormat::Chunk::Header']]],
+  ['up_5fdir_5f',['up_dir_',['../classOpenMesh_1_1VDPM_1_1ViewingParameters.html#ac329fab2b1ca0a5ba6d5abd14fa1dca3',1,'OpenMesh::VDPM::ViewingParameters']]],
+  ['uplink_5ffile',['uplink_file',['../classVDPMClientViewerWidget.html#ab1f6cba7e037c0af00985d5af0ea934f',1,'VDPMClientViewerWidget']]],
+  ['use_5fcolor_5f',['use_color_',['../classMeshViewerWidgetT.html#a13969418d8c11194f0be7aef2390e2be',1,'MeshViewerWidgetT']]],
+  ['used_5f',['used_',['../classOpenMesh_1_1StripifierT.html#a11d3cbe2328dfcfe51d7c493cf007d68',1,'OpenMesh::StripifierT']]],
+  ['useroptions_5f',['userOptions_',['../classOpenMesh_1_1IO_1_1__OFFReader__.html#a3e230068dc4ccc4f7fcf6ca483cfffc6',1,'OpenMesh::IO::_OFFReader_::userOptions_()'],['../classOpenMesh_1_1IO_1_1__PLYReader__.html#ab527d59092c4627074926059d2ed7fb9',1,'OpenMesh::IO::_PLYReader_::userOptions_()']]]
 ];

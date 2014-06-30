@@ -15,6 +15,7 @@ var annotated =
     [ "huffman", "structhuffman.html", "structhuffman" ],
     [ "ImplicitSphere", "structImplicitSphere.html", "structImplicitSphere" ],
     [ "jpeg", "structjpeg.html", "structjpeg" ],
+    [ "MeshTools", "classMeshTools.html", "classMeshTools" ],
     [ "pic_packet_t", "structpic__packet__t.html", "structpic__packet__t" ],
     [ "png", "structpng.html", "structpng" ],
     [ "renderTexture", "classrenderTexture.html", "classrenderTexture" ],

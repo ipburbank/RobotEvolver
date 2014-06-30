@@ -19,6 +19,7 @@ var searchData=
   ['img_5fx',['img_x',['../structstbi.html#af3b42c257fb0d8896f29ca3921540a42',1,'stbi']]],
   ['img_5fy',['img_y',['../structstbi.html#a60cb5a630e268b2d12306c6eca246dd1',1,'stbi']]],
   ['implicitsphere',['ImplicitSphere',['../structImplicitSphere.html',1,'ImplicitSphere'],['../structImplicitSphere.html#a4948bc168565cd25fd96b6ecfd3b878c',1,'ImplicitSphere::ImplicitSphere()'],['../structImplicitSphere.html#ad9554e23503d944a6d236140cd55fdfe',1,'ImplicitSphere::ImplicitSphere(const btVector3 &amp;c, btScalar r)']]],
+  ['init_5fcustomcube',['Init_CustomCube',['../SoftDemo_8cpp.html#a4e6c13eb6bfc5e8d92fc3e8ffe73c030',1,'SoftDemo.cpp']]],
   ['init_5fdefaults',['init_defaults',['../stb__image_8cpp.html#adaf0e04594c8d1dbdc0ef45b20da99ab',1,'stb_image.cpp']]],
   ['init_5ftetracube',['Init_TetraCube',['../SoftDemo_8cpp.html#af43dffb6bb5e7e33384766c7ccc0cf18',1,'SoftDemo.cpp']]],
   ['init_5fvolume',['Init_Volume',['../SoftDemo_8cpp.html#a208b821f3e5b49f741a10021b3e02c3c',1,'SoftDemo.cpp']]],

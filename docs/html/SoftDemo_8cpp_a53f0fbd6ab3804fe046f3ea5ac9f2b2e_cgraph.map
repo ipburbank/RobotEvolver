@@ -1,5 +1,0 @@
-<map id="Init_TetraBunny" name="Init_TetraBunny">
-<area shape="rect" id="node2" href="$structTetraBunny.html#a411a1f8ae8b1611bd1d85cc6e47989dd" title="TetraBunny::getElements" alt="" coords="179,5,349,32"/>
-<area shape="rect" id="node3" href="$structTetraBunny.html#aae6586b040cc96e556466522f04cfc7a" title="TetraBunny::getNodes" alt="" coords="187,56,341,83"/>
-<area shape="rect" id="node4" href="$classSoftDemo.html#a0ab9c8a0fd1df67589aaf842568941f1" title="SoftDemo::getSoftDynamics\lWorld" alt="" coords="169,107,359,149"/>
-</map>
