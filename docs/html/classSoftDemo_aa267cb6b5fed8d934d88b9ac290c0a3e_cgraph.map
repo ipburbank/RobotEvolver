@@ -1,6 +1,0 @@
-<map id="SoftDemo::clientResetScene" name="SoftDemo::clientResetScene">
-<area shape="rect" id="node2" href="$classDemoApplication.html#a1e7d53bd10abf7c5c0e46f44d05e1aa9" title="DemoApplication::clientReset\lScene" alt="" coords="245,37,440,78"/>
-<area shape="rect" id="node5" href="$classSoftDemo.html#a0ab9c8a0fd1df67589aaf842568941f1" title="SoftDemo::getSoftDynamics\lWorld" alt="" coords="247,102,438,143"/>
-<area shape="rect" id="node3" href="$classDemoApplication.html#a8e806bd8b967a6c8212e53e9da35312f" title="DemoApplication::removePicking\lConstraint" alt="" coords="489,5,703,46"/>
-<area shape="rect" id="node4" href="$classDemoApplication.html#ac466ff67fa337bfaf79d0f271a5cbcfd" title="DemoApplication::getDynamics\lWorld" alt="" coords="493,70,699,111"/>
-</map>

@@ -1,7 +1,0 @@
-<map id="GL_SliderControl::draw" name="GL_SliderControl::draw">
-<area shape="rect" id="node2" href="$classGL__DialogWindow.html#a9f8d89677347b1550ec2b323e4063383" title="GL_DialogWindow::getScreen\lWidth" alt="" coords="211,5,408,46"/>
-<area shape="rect" id="node3" href="$classGL__DialogWindow.html#ac595e982efb4ea1181ca96a7a2abcbb5" title="GL_DialogWindow::getScreen\lHeight" alt="" coords="211,70,408,111"/>
-<area shape="rect" id="node4" href="$classGL__DialogWindow.html#a3add2c9acfdfda03bf94dbd4b34029cd" title="GL_DialogWindow::getDialog\lWidth" alt="" coords="213,135,406,177"/>
-<area shape="rect" id="node5" href="$GL__DialogWindow_8cpp.html#ae01514f7bc4d01cb79cc125754dc9845" title="drawRect" alt="" coords="270,201,349,228"/>
-<area shape="rect" id="node6" href="$GLDebugFont_8cpp.html#a3537b9c9bfaaa6bca4b00cf908e23482" title="GLDebugDrawStringInternal" alt="" coords="217,276,402,303"/>
-</map>

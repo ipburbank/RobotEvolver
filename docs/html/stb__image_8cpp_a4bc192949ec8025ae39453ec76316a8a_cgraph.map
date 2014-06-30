@@ -1,8 +1,0 @@
-<map id="tga_info" name="tga_info">
-<area shape="rect" id="node2" href="$stb__image_8cpp.html#a8ab33004ad51977319641ade6494ec19" title="get8u" alt="" coords="139,5,194,32"/>
-<area shape="rect" id="node3" href="$stb__image_8cpp.html#ae7d89884c32f0eb6edd8e7369031ae13" title="get8" alt="" coords="259,56,306,83"/>
-<area shape="rect" id="node5" href="$stb__image_8cpp.html#a68ecfb7bf76eae3a09f27ba97ad0d341" title="stbi_rewind" alt="" coords="123,107,211,133"/>
-<area shape="rect" id="node6" href="$stb__image_8cpp.html#a70132eb48871f2c3668bbd478eb2748c" title="skip" alt="" coords="143,157,190,184"/>
-<area shape="rect" id="node7" href="$stb__image_8cpp.html#aeef53f9c6b757791340b398119198b83" title="get16le" alt="" coords="135,208,199,235"/>
-<area shape="rect" id="node4" href="$stb__image_8cpp.html#ace61fc7f5daabdb6dc0d60813346901a" title="refill_buffer" alt="" coords="355,56,442,83"/>
-</map>

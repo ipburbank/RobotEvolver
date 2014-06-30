@@ -1,6 +1,0 @@
-<map id="GL_ToggleControl::draw" name="GL_ToggleControl::draw">
-<area shape="rect" id="node2" href="$classGL__DialogWindow.html#a9f8d89677347b1550ec2b323e4063383" title="GL_DialogWindow::getScreen\lWidth" alt="" coords="216,5,413,46"/>
-<area shape="rect" id="node3" href="$classGL__DialogWindow.html#ac595e982efb4ea1181ca96a7a2abcbb5" title="GL_DialogWindow::getScreen\lHeight" alt="" coords="216,70,413,111"/>
-<area shape="rect" id="node4" href="$GL__DialogWindow_8cpp.html#ae01514f7bc4d01cb79cc125754dc9845" title="drawRect" alt="" coords="275,136,354,163"/>
-<area shape="rect" id="node5" href="$GLDebugFont_8cpp.html#a3537b9c9bfaaa6bca4b00cf908e23482" title="GLDebugDrawStringInternal" alt="" coords="222,211,407,237"/>
-</map>

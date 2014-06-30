@@ -1,8 +1,0 @@
-<map id="stbi_is_hdr_from_memory" name="stbi_is_hdr_from_memory">
-<area shape="rect" id="node2" href="$stb__image_8cpp.html#a0332d2759b3d8231deadfa483947e1c8" title="start_mem" alt="" coords="234,5,318,32"/>
-<area shape="rect" id="node3" href="$stb__image_8cpp.html#a6e9b8b19d7eaf58f83433e821ceedbb2" title="stbi_hdr_test" alt="" coords="227,56,325,83"/>
-<area shape="rect" id="node4" href="$stb__image_8cpp.html#aecb01879b94528123e244c3f8d36ece6" title="hdr_test" alt="" coords="383,31,452,57"/>
-<area shape="rect" id="node7" href="$stb__image_8cpp.html#a68ecfb7bf76eae3a09f27ba97ad0d341" title="stbi_rewind" alt="" coords="373,81,461,108"/>
-<area shape="rect" id="node5" href="$stb__image_8cpp.html#ae7d89884c32f0eb6edd8e7369031ae13" title="get8" alt="" coords="510,31,557,57"/>
-<area shape="rect" id="node6" href="$stb__image_8cpp.html#ace61fc7f5daabdb6dc0d60813346901a" title="refill_buffer" alt="" coords="606,31,693,57"/>
-</map>

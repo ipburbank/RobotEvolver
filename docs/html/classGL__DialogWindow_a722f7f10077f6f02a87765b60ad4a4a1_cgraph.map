@@ -1,8 +1,0 @@
-<map id="GL_DialogWindow::draw" name="GL_DialogWindow::draw">
-<area shape="rect" id="node2" href="$classGL__DialogWindow.html#af977c142e912a5706fe45d805827cec7" title="GL_DialogWindow::saveOpen\lGLState" alt="" coords="221,5,419,46"/>
-<area shape="rect" id="node3" href="$GL__DialogWindow_8cpp.html#ae01514f7bc4d01cb79cc125754dc9845" title="drawRect" alt="" coords="281,71,359,97"/>
-<area shape="rect" id="node4" href="$GL__DialogWindow_8cpp.html#a7ca742f37a39002b0f3e20b3bdea9cb9" title="drawLine" alt="" coords="283,121,357,148"/>
-<area shape="rect" id="node5" href="$GLDebugFont_8cpp.html#a72a2876893b18cedcfa131dfe09841b9" title="GLDebugDrawString" alt="" coords="249,172,391,199"/>
-<area shape="rect" id="node7" href="$classGL__DialogWindow.html#aca30726d4b12fbf89cb3506cf06a6347" title="GL_DialogWindow::restore\lOpenGLState" alt="" coords="231,223,409,265"/>
-<area shape="rect" id="node6" href="$GLDebugFont_8cpp.html#a3537b9c9bfaaa6bca4b00cf908e23482" title="GLDebugDrawStringInternal" alt="" coords="467,172,653,199"/>
-</map>

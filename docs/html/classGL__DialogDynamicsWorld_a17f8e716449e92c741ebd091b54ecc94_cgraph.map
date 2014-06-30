@@ -1,9 +1,0 @@
-<map id="GL_DialogDynamicsWorld::createSlider" name="GL_DialogDynamicsWorld::createSlider">
-<area shape="rect" id="node2" href="$classGL__DialogWindow.html#a9bd77630343068e56e012d93a1f86bba" title="GL_DialogWindow::getDialog\lHorPos" alt="" coords="250,5,443,46"/>
-<area shape="rect" id="node3" href="$classGL__DialogWindow.html#a3add2c9acfdfda03bf94dbd4b34029cd" title="GL_DialogWindow::getDialog\lWidth" alt="" coords="250,70,443,111"/>
-<area shape="rect" id="node4" href="$classGL__DialogWindow.html#a0e7abc3b72603ec14e9a444d2950bfb0" title="GL_DialogWindow::getDialog\lVertPos" alt="" coords="250,135,443,177"/>
-<area shape="rect" id="node5" href="$classGL__DialogWindow.html#ab1eda43b4eb99224e991d2296c811fb8" title="GL_DialogWindow::getDialog\lHeight" alt="" coords="250,201,443,242"/>
-<area shape="rect" id="node6" href="$classGL__DialogWindow.html#a7d1dc3bc515abf57a78d77ab14161026" title="GL_DialogWindow::getNumControls" alt="" coords="230,267,463,293"/>
-<area shape="rect" id="node7" href="$classGL__DialogWindow.html#a13d38c54d5eaa9ad958582b6b385c222" title="GL_DialogWindow::getCollision\lObject" alt="" coords="243,318,450,359"/>
-<area shape="rect" id="node8" href="$classGL__DialogWindow.html#a56c26f294d68b3a7ad82beb52a74a765" title="GL_DialogWindow::addControl" alt="" coords="246,384,447,411"/>
-</map>

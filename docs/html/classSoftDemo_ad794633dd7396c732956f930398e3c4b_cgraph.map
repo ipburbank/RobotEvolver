@@ -1,8 +1,0 @@
-<map id="SoftDemo::initPhysics" name="SoftDemo::initPhysics">
-<area shape="rect" id="node2" href="$SoftDemo_8cpp.html#ae5a1f67485787a497f987f086af9d7ce" title="for mouse picking " alt="" coords="225,27,383,53"/>
-<area shape="rect" id="node3" href="$classSoftDemo.html#aa267cb6b5fed8d934d88b9ac290c0a3e" title="SoftDemo::clientResetScene" alt="" coords="208,77,400,104"/>
-<area shape="rect" id="node4" href="$classDemoApplication.html#a1e7d53bd10abf7c5c0e46f44d05e1aa9" title="DemoApplication::clientReset\lScene" alt="" coords="448,37,643,78"/>
-<area shape="rect" id="node7" href="$classSoftDemo.html#a0ab9c8a0fd1df67589aaf842568941f1" title="SoftDemo::getSoftDynamics\lWorld" alt="" coords="450,102,641,143"/>
-<area shape="rect" id="node5" href="$classDemoApplication.html#a8e806bd8b967a6c8212e53e9da35312f" title="DemoApplication::removePicking\lConstraint" alt="" coords="691,5,906,46"/>
-<area shape="rect" id="node6" href="$classDemoApplication.html#ac466ff67fa337bfaf79d0f271a5cbcfd" title="DemoApplication::getDynamics\lWorld" alt="" coords="695,70,902,111"/>
-</map>

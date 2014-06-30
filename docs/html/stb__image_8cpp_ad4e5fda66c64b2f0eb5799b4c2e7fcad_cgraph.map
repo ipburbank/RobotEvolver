@@ -1,7 +1,0 @@
-<map id="stbi_process_gif_raster" name="stbi_process_gif_raster">
-<area shape="rect" id="node2" href="$stb__image_8cpp.html#a8ab33004ad51977319641ade6494ec19" title="get8u" alt="" coords="246,5,301,32"/>
-<area shape="rect" id="node3" href="$stb__image_8cpp.html#ae7d89884c32f0eb6edd8e7369031ae13" title="get8" alt="" coords="385,31,431,57"/>
-<area shape="rect" id="node5" href="$stb__image_8cpp.html#a70132eb48871f2c3668bbd478eb2748c" title="skip" alt="" coords="250,107,297,133"/>
-<area shape="rect" id="node6" href="$stb__image_8cpp.html#a9b6228119e98d838a41a0c6ec24666ad" title="stbi_out_gif_code" alt="" coords="211,157,335,184"/>
-<area shape="rect" id="node4" href="$stb__image_8cpp.html#ace61fc7f5daabdb6dc0d60813346901a" title="refill_buffer" alt="" coords="481,31,567,57"/>
-</map>

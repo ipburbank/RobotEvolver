@@ -1,6 +1,0 @@
-<map id="DemoApplication::renderscene" name="DemoApplication::renderscene">
-<area shape="rect" id="node2" href="$classDemoApplication.html#aa499992e8a789530492d7d59958cbc43" title="DemoApplication::getDebugMode" alt="" coords="254,5,471,32"/>
-<area shape="rect" id="node3" href="$classGL__ShapeDrawer.html#a93646a42c01e352249d2575ce40416f7" title="drawOpenGL might allocate temporary memoty, stores pointer in shape userpointer " alt="" coords="258,56,467,83"/>
-<area shape="rect" id="node5" href="$classGL__ShapeDrawer.html#a73fcdb31677d8ade6db58a1f71861fe1" title="GL_ShapeDrawer::drawShadow" alt="" coords="259,107,467,133"/>
-<area shape="rect" id="node4" href="$GL__ShapeDrawer_8cpp.html#aef05eaf5891a1575439ec67af9967857" title="glDrawVector" alt="" coords="520,56,621,83"/>
-</map>

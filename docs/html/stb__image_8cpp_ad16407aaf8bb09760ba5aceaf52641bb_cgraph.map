@@ -1,7 +1,0 @@
-<map id="decode_block" name="decode_block">
-<area shape="rect" id="node2" href="$stb__image_8cpp.html#a56921e2bc51ca531cdba1e5b7f280a9e" title="decode" alt="" coords="181,5,245,32"/>
-<area shape="rect" id="node6" href="$stb__image_8cpp.html#aef53e2b28f4d5de097bd53e68c8be3f6" title="extend_receive" alt="" coords="158,56,269,83"/>
-<area shape="rect" id="node3" href="$stb__image_8cpp.html#a0d5cd042c3f9d8dd94e1cba45c4ccfc0" title="grow_buffer_unsafe" alt="" coords="317,31,453,57"/>
-<area shape="rect" id="node4" href="$stb__image_8cpp.html#ae7d89884c32f0eb6edd8e7369031ae13" title="get8" alt="" coords="502,31,549,57"/>
-<area shape="rect" id="node5" href="$stb__image_8cpp.html#ace61fc7f5daabdb6dc0d60813346901a" title="refill_buffer" alt="" coords="598,31,685,57"/>
-</map>

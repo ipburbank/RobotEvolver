@@ -1,7 +1,0 @@
-<map id="glutMotionFuncCallback" name="glutMotionFuncCallback">
-<area shape="rect" id="node2" href="$classDemoApplication.html#abce282983b2ffabf0a32162f41dcbdb1" title="DemoApplication::mouseMotionFunc" alt="" coords="217,69,453,96"/>
-<area shape="rect" id="node3" href="$classDemoApplication.html#a31bfbdc5d9fa2db72705a7294a0598e0" title="DemoApplication::getRayTo" alt="" coords="516,44,703,71"/>
-<area shape="rect" id="node6" href="$classDemoApplication.html#aea586ac9d1ab04fe9cc92d5d103ec6b5" title="DemoApplication::updateCamera" alt="" coords="502,95,717,121"/>
-<area shape="rect" id="node4" href="$classDemoApplication.html#ad9f0eec430829ba5fa9ab18972c88842" title="DemoApplication::getCamera\lPosition" alt="" coords="766,5,959,46"/>
-<area shape="rect" id="node5" href="$classDemoApplication.html#ac8e885c61370f509a120b8535560dcf6" title="DemoApplication::getCamera\lTargetPosition" alt="" coords="766,70,959,111"/>
-</map>

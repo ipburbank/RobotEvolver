@@ -1,9 +1,0 @@
-<map id="tga_load" name="tga_load">
-<area shape="rect" id="node2" href="$stb__image_8cpp.html#a8ab33004ad51977319641ade6494ec19" title="get8u" alt="" coords="142,5,197,32"/>
-<area shape="rect" id="node5" href="$stb__image_8cpp.html#aeef53f9c6b757791340b398119198b83" title="get16le" alt="" coords="137,56,201,83"/>
-<area shape="rect" id="node6" href="$stb__image_8cpp.html#a70132eb48871f2c3668bbd478eb2748c" title="skip" alt="" coords="146,107,193,133"/>
-<area shape="rect" id="node7" href="$stb__image_8cpp.html#a8780812d8f19a042ef706fcf49ccf125" title="getn" alt="" coords="146,157,193,184"/>
-<area shape="rect" id="node8" href="$stb__image_8cpp.html#afef9f8f44dd22cf7222c0553824d4f4f" title="compute_y" alt="" coords="126,208,213,235"/>
-<area shape="rect" id="node3" href="$stb__image_8cpp.html#ae7d89884c32f0eb6edd8e7369031ae13" title="get8" alt="" coords="262,31,309,57"/>
-<area shape="rect" id="node4" href="$stb__image_8cpp.html#ace61fc7f5daabdb6dc0d60813346901a" title="refill_buffer" alt="" coords="358,31,445,57"/>
-</map>

@@ -1,8 +1,0 @@
-<map id="stbi_psd_test" name="stbi_psd_test">
-<area shape="rect" id="node2" href="$stb__image_8cpp.html#a06ce886e6451d8a056122f4dc28ae85d" title="psd_test" alt="" coords="163,5,235,32"/>
-<area shape="rect" id="node7" href="$stb__image_8cpp.html#a68ecfb7bf76eae3a09f27ba97ad0d341" title="stbi_rewind" alt="" coords="155,56,243,83"/>
-<area shape="rect" id="node3" href="$stb__image_8cpp.html#af0cf46c0fd30cf9aa5478c5e59cabdce" title="get32" alt="" coords="291,5,346,32"/>
-<area shape="rect" id="node4" href="$stb__image_8cpp.html#aa6f16d004643ea5c5c38c7198dc25141" title="get16" alt="" coords="395,5,450,32"/>
-<area shape="rect" id="node5" href="$stb__image_8cpp.html#ae7d89884c32f0eb6edd8e7369031ae13" title="get8" alt="" coords="499,5,546,32"/>
-<area shape="rect" id="node6" href="$stb__image_8cpp.html#ace61fc7f5daabdb6dc0d60813346901a" title="refill_buffer" alt="" coords="595,5,682,32"/>
-</map>

@@ -1,9 +1,0 @@
-<map id="hdr_load" name="hdr_load">
-<area shape="rect" id="node2" href="$stb__image_8cpp.html#ab33e40eedec8923b099b0262b5784173" title="hdr_gettoken" alt="" coords="126,208,223,235"/>
-<area shape="rect" id="node3" href="$stb__image_8cpp.html#ae7d89884c32f0eb6edd8e7369031ae13" title="get8" alt="" coords="278,56,325,83"/>
-<area shape="rect" id="node6" href="$stb__image_8cpp.html#a8780812d8f19a042ef706fcf49ccf125" title="getn" alt="" coords="151,107,198,133"/>
-<area shape="rect" id="node7" href="$stb__image_8cpp.html#a624764d3c46a924fd92818b0ae46600e" title="hdr_convert" alt="" coords="129,157,220,184"/>
-<area shape="rect" id="node8" href="$stb__image_8cpp.html#a8ab33004ad51977319641ade6494ec19" title="get8u" alt="" coords="147,5,202,32"/>
-<area shape="rect" id="node5" href="$stb__image_8cpp.html#ab31358888a33f78e7aa94da17114d8ce" title="at_eof" alt="" coords="272,208,331,235"/>
-<area shape="rect" id="node4" href="$stb__image_8cpp.html#ace61fc7f5daabdb6dc0d60813346901a" title="refill_buffer" alt="" coords="379,56,466,83"/>
-</map>
