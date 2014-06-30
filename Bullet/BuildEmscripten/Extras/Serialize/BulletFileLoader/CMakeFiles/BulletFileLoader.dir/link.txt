@@ -1,0 +1,1 @@
+/usr/lib/emscripten/emar rc libBulletFileLoader.a  @CMakeFiles/BulletFileLoader.dir/objects1.rsp

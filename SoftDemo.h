@@ -164,8 +164,3 @@ MACRO_SOFT_DEMO(2) //Init_CustomCube
 MACRO_SOFT_DEMO(3) //Init_PressureCube
 
 #endif //CCD_PHYSICS_DEMO_H
-
-
-
-
-

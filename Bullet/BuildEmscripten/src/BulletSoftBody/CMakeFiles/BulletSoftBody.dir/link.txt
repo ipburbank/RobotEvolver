@@ -1,0 +1,1 @@
+/usr/lib/emscripten/emar rc libBulletSoftBody.a  @CMakeFiles/BulletSoftBody.dir/objects1.rsp

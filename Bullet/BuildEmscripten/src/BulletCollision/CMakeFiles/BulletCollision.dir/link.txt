@@ -1,0 +1,1 @@
+/usr/lib/emscripten/emar rc libBulletCollision.a  @CMakeFiles/BulletCollision.dir/objects1.rsp

@@ -1,0 +1,11 @@
+/home/istvan/Desktop/RobotEvolver/master/Bullet/BuildEmscripten/Demos/HelloWorld/CMakeFiles/AppHelloWorld.dir
+/home/istvan/Desktop/RobotEvolver/master/Bullet/BuildEmscripten/src/BulletCollision/CMakeFiles/BulletCollision.dir
+/home/istvan/Desktop/RobotEvolver/master/Bullet/BuildEmscripten/src/BulletDynamics/CMakeFiles/BulletDynamics.dir
+/home/istvan/Desktop/RobotEvolver/master/Bullet/BuildEmscripten/Extras/Serialize/BulletFileLoader/CMakeFiles/BulletFileLoader.dir
+/home/istvan/Desktop/RobotEvolver/master/Bullet/BuildEmscripten/src/BulletSoftBody/CMakeFiles/BulletSoftBody.dir
+/home/istvan/Desktop/RobotEvolver/master/Bullet/BuildEmscripten/Extras/Serialize/BulletWorldImporter/CMakeFiles/BulletWorldImporter.dir
+/home/istvan/Desktop/RobotEvolver/master/Bullet/BuildEmscripten/Extras/Serialize/BulletXmlWorldImporter/CMakeFiles/BulletXmlWorldImporter.dir
+/home/istvan/Desktop/RobotEvolver/master/Bullet/BuildEmscripten/Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir
+/home/istvan/Desktop/RobotEvolver/master/Bullet/BuildEmscripten/Extras/GIMPACTUtils/CMakeFiles/GIMPACTUtils.dir
+/home/istvan/Desktop/RobotEvolver/master/Bullet/BuildEmscripten/Extras/HACD/CMakeFiles/HACD.dir
+/home/istvan/Desktop/RobotEvolver/master/Bullet/BuildEmscripten/src/LinearMath/CMakeFiles/LinearMath.dir

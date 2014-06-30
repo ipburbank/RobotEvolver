@@ -4,16 +4,31 @@
 #include <iostream>
 // -------------------- OpenMesh
 #include <OpenMesh/Core/IO/MeshIO.hh>
-#include <OpenMesh/Core/Mesh/PolyMesh_ArrayKernelT.hh>
-#include <OpenMesh/Core/Mesh/PolyConnectivity.hh>
+#include <OpenMesh/Core/Mesh/TriMesh_ArrayKernelT.hh>
+#include <OpenMesh/Core/Mesh/TriConnectivity.hh>
 #include <OpenMesh/Tools/Subdivider/Uniform/CompositeLoopT.hh>
 
-typedef OpenMesh::PolyMesh_ArrayKernelT<> MeshT;
+#include <OpenMesh/Tools/Subdivider/Uniform/CatmullClarkT.hh>
 
-class MeshTools {
- public:
-  static MeshT ctor_cube();
-  static MeshT subdivide(MeshT); 
+typedef OpenMesh::TriMesh_ArrayKernelT<> MeshT;
+
+/**
+   Mesh generation and modification tools.
+*/
+class MeshTools
+{
+MeshT mesh;
+
+public:
+MeshTools(){MeshT mesh;};
+~MeshTools(){};
+
+std::vector<float> getVertices();
+std::vector<int[3]> getFaces();
+
+MeshT ctor_cube(); /** Make this mesh a cube */
+MeshT subdivide(int divisions); /** Subdivide this mesh */
+MeshT triangulate(); /** Make this mesh consist of triangles only */
 };
 
 #endif

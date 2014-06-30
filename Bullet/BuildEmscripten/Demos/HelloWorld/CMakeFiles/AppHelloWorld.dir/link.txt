@@ -1,0 +1,1 @@
+/usr/lib/emscripten/em++   -DNDEBUG -O2    -O2 @CMakeFiles/AppHelloWorld.dir/objects1.rsp  -o AppHelloWorld -rdynamic ../../src/BulletDynamics/libBulletDynamics.a ../../src/BulletCollision/libBulletCollision.a ../../src/LinearMath/libLinearMath.a 
