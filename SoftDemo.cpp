@@ -483,13 +483,47 @@ static btSoftBody* Ctor_TriBox(SoftDemo* pdemo)
   return psb;
 }
 
+static btSoftBody* OpenMeshCube(SoftDemo* pdemo)
+{
+  MeshTools testCube;
+  testCube.ctor_cube();
+  
+  std::vector<float> verts = testCube.getVertices();
+  std::vector<std::array<int, 3>> faces = testCube.getFaces();
+
+  static Real* gVerticesCube = (Real*) &verts[0];
+  
+  static int **gIndicesCube = new int*[faces.size()];
+  for(int i = 0; i < faces.size(); ++i)
+    gIndicesCube[i] = new int[3];
+
+  //read the faces into the array
+  for(int i = 0; i < faces.size(); i++)
+    {
+      for(int j = 0; j < 3; j++)
+        {
+          printf("int: %i\n", faces[i][j]);
+          gIndicesCube[i][j] = faces[i][j];
+        }
+    }
+  printf("done\n");
+
+  btSoftBody* psb=btSoftBodyHelpers::CreateFromTriMesh( pdemo->m_softBodyWorldInfo, gVerticesCube, &gIndicesCube[0][0], faces.size());
+  pdemo->getSoftDynamicsWorld()->addSoftBody(psb);
+
+  free(gIndicesCube);
+
+  return psb;
+}
+
+
 //
 // Custom Cube
 //You need to call setPose(...,true) only when you want to use shape matching (kMT), and setPose(true,...) when you want to use pressure forces (kPR) and/or volume conservation forces (kVC).
 static void Init_CustomCube(SoftDemo* pdemo)
 {
         
-  btSoftBody* psb1=Ctor_TriBox(pdemo);
+  btSoftBody* psb1 = OpenMeshCube(pdemo);
   psb1->m_cfg.piterations=1;
 	
   psb1->generateClusters(4);

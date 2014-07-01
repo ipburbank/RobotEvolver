@@ -24,11 +24,10 @@ MeshTools(){MeshT mesh;};
 ~MeshTools(){};
 
 std::vector<float> getVertices();
-std::vector<int[3]> getFaces();
+std::vector<std::array<int, 3>> getFaces();
 
 MeshT ctor_cube(); /** Make this mesh a cube */
 MeshT subdivide(int divisions); /** Subdivide this mesh */
-MeshT triangulate(); /** Make this mesh consist of triangles only */
 };
 
 #endif

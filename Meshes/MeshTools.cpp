@@ -2,17 +2,40 @@
 
 std::vector<float> MeshTools::getVertices()
 {
+  std::vector<float> verts;
 
+  for (MeshT::VertexIter v_it = mesh.vertices_sbegin(); v_it != mesh.vertices_end(); ++v_it)
+    {
+      verts.push_back(v_it->idx());
+    }
+
+  return verts;
 }
 
-std::vector<int[3]> MeshTools::getFaces()
+std::vector<std::array<int, 3>> MeshTools::getFaces()
 {
+  std::vector<std::array<int, 3>> faces;
+
   // iterate over all faces
-  for (MeshT::FaceIter f_it=mesh.faces_sbegin(); f_it!=mesh.faces_end(); ++f_it)
+  for (MeshT::FaceIter f_it = mesh.faces_sbegin(); f_it != mesh.faces_end(); ++f_it)
     {
       // Get the face-vertex circulator of face _fh
       MeshT::FaceVertexIter fv_it=mesh.fv_iter (*f_it);
+
+      //place to store the verts
+      std::array<int, 3> verts;
+
+      for(int i=0; i < 3; i++)
+        {
+          fv_it++;
+          verts[i] = fv_it->idx();
+        }
+
+      //store the face in the vector
+      faces.push_back(verts);
     }
+
+  return faces;
 }
 
 MeshT MeshTools::ctor_cube()
@@ -87,12 +110,5 @@ MeshT MeshTools::subdivide(int divisions)
   subdivider( divisions );
   subdivider.detach();
   
-  return mesh;
-}
-
-MeshT MeshTools::triangulate()
-{
-  mesh.triangulate();
-
   return mesh;
 }
