@@ -6,7 +6,9 @@ std::vector<float> MeshTools::getVertices()
 
   for (MeshT::VertexIter v_it = mesh.vertices_sbegin(); v_it != mesh.vertices_end(); ++v_it)
     {
-      verts.push_back(v_it->idx());
+      verts.push_back(mesh.point(*v_it)[0]);
+      verts.push_back(mesh.point(*v_it)[1]);
+      verts.push_back(mesh.point(*v_it)[2]);
     }
 
   return verts;
@@ -103,7 +105,7 @@ MeshT MeshTools::subdivide(int divisions)
 {
   // Initialize subdivider
   
-  OpenMesh::Subdivider::Uniform::CatmullClarkT<MeshT> subdivider;
+  OpenMesh::Subdivider::Uniform::Sqrt3T<MeshT> subdivider;
   
   // Execute subdivision
   subdivider.attach(mesh);

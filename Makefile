@@ -1,5 +1,5 @@
 all:
-	g++ -o bin/Native/softapp.app -g -std=c++11 -isystemBullet/bullet/src -I/usr/local/lib -IMeshes/OpenMesh/OpenMesh/src \
+	g++ -o bin/Native/softapp.app -std=c++11 -g -isystemBullet/bullet/src -I/usr/local/lib -IMeshes/OpenMesh/OpenMesh/src \
 	-lglut -lGL -lGLU \
 	BulletDemoFiles/DemoApplication.cpp \
 	BulletDemoFiles/GLDebugFont.cpp BulletDemoFiles/GlutDemoApplication.cpp BulletDemoFiles/GL_ShapeDrawer.cpp  \

@@ -6,8 +6,10 @@
 #include <OpenMesh/Core/IO/MeshIO.hh>
 #include <OpenMesh/Core/Mesh/TriMesh_ArrayKernelT.hh>
 #include <OpenMesh/Core/Mesh/TriConnectivity.hh>
-#include <OpenMesh/Tools/Subdivider/Uniform/CompositeLoopT.hh>
 
+#include <OpenMesh/Tools/Subdivider/Uniform/Sqrt3T.hh>
+#include <OpenMesh/Tools/Subdivider/Uniform/Composite/CompositeT.hh>
+#include <OpenMesh/Tools/Subdivider/Uniform/CompositeLoopT.hh>
 #include <OpenMesh/Tools/Subdivider/Uniform/CatmullClarkT.hh>
 
 typedef OpenMesh::TriMesh_ArrayKernelT<> MeshT;

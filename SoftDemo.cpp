@@ -487,31 +487,31 @@ static btSoftBody* OpenMeshCube(SoftDemo* pdemo)
 {
   MeshTools testCube;
   testCube.ctor_cube();
-  
+  testCube.subdivide(2);
+
   std::vector<float> verts = testCube.getVertices();
   std::vector<std::array<int, 3>> faces = testCube.getFaces();
 
   static Real* gVerticesCube = (Real*) &verts[0];
   
-  static int **gIndicesCube = new int*[faces.size()];
-  for(int i = 0; i < faces.size(); ++i)
-    gIndicesCube[i] = new int[3];
+  //TODO: try &faces[0];
+  static int (*gIndicesCube)[3] = (int(*)[3]) new int[faces.size()*3];
+
+  printf("faces: %i\n", verts.size());
 
   //read the faces into the array
   for(int i = 0; i < faces.size(); i++)
     {
       for(int j = 0; j < 3; j++)
         {
-          printf("int: %i\n", faces[i][j]);
           gIndicesCube[i][j] = faces[i][j];
         }
     }
-  printf("done\n");
 
   btSoftBody* psb=btSoftBodyHelpers::CreateFromTriMesh( pdemo->m_softBodyWorldInfo, gVerticesCube, &gIndicesCube[0][0], faces.size());
   pdemo->getSoftDynamicsWorld()->addSoftBody(psb);
 
-  free(gIndicesCube);
+  delete [](int*)gIndicesCube;
 
   return psb;
 }
@@ -543,7 +543,7 @@ static void Init_CustomCube(SoftDemo* pdemo)
 
 
 
-
+  
   btSoftBody* psb2=Ctor_TriBox(pdemo);
 
 
@@ -562,7 +562,7 @@ static void Init_CustomCube(SoftDemo* pdemo)
   psb2->m_pose.m_volume += 20.5;
 
   pdemo->getSoftDynamicsWorld()->addSoftBody(psb2);
-
+  
   pdemo->m_autocam=true;
 }
 
