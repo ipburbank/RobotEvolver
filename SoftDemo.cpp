@@ -494,7 +494,6 @@ static btSoftBody* OpenMeshCube(SoftDemo* pdemo)
 
   static Real* gVerticesCube = (Real*) &verts[0];
   
-  //TODO: try &faces[0];
   static int (*gIndicesCube)[3] = (int(*)[3]) new int[faces.size()*3];
 
   printf("faces: %i\n", verts.size());
@@ -509,7 +508,7 @@ static btSoftBody* OpenMeshCube(SoftDemo* pdemo)
     }
 
   btSoftBody* psb=btSoftBodyHelpers::CreateFromTriMesh( pdemo->m_softBodyWorldInfo, gVerticesCube, &gIndicesCube[0][0], faces.size());
-  pdemo->getSoftDynamicsWorld()->addSoftBody(psb);
+  //pdemo->getSoftDynamicsWorld()->addSoftBody(psb);
 
   delete [](int*)gIndicesCube;
 
@@ -544,7 +543,7 @@ static void Init_CustomCube(SoftDemo* pdemo)
 
 
   
-  btSoftBody* psb2=Ctor_TriBox(pdemo);
+  btSoftBody* psb2=OpenMeshCube(pdemo);
 
 
   psb2->m_cfg.piterations=1;
