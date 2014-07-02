@@ -1,0 +1,6 @@
+<map id="pic_readval" name="pic_readval">
+<area shape="rect" id="node2" href="$stb__image_8cpp.html#ab31358888a33f78e7aa94da17114d8ce" title="at_eof" alt="" coords="141,5,200,32"/>
+<area shape="rect" id="node3" href="$stb__image_8cpp.html#a8ab33004ad51977319641ade6494ec19" title="get8u" alt="" coords="143,56,198,83"/>
+<area shape="rect" id="node4" href="$stb__image_8cpp.html#ae7d89884c32f0eb6edd8e7369031ae13" title="get8" alt="" coords="249,56,295,83"/>
+<area shape="rect" id="node5" href="$stb__image_8cpp.html#ace61fc7f5daabdb6dc0d60813346901a" title="refill_buffer" alt="" coords="345,56,431,83"/>
+</map>

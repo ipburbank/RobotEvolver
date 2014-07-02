@@ -1,0 +1,8 @@
+<map id="stbi_bmp_info" name="stbi_bmp_info">
+<area shape="rect" id="node2" href="$stb__image_8cpp.html#ae7d89884c32f0eb6edd8e7369031ae13" title="get8" alt="" coords="406,53,453,79"/>
+<area shape="rect" id="node4" href="$stb__image_8cpp.html#a68ecfb7bf76eae3a09f27ba97ad0d341" title="stbi_rewind" alt="" coords="157,27,245,54"/>
+<area shape="rect" id="node5" href="$stb__image_8cpp.html#a70132eb48871f2c3668bbd478eb2748c" title="skip" alt="" coords="178,78,225,105"/>
+<area shape="rect" id="node6" href="$stb__image_8cpp.html#a490e673a041c77ffd3bf3678b63ac401" title="get32le" alt="" coords="169,129,233,155"/>
+<area shape="rect" id="node7" href="$stb__image_8cpp.html#aeef53f9c6b757791340b398119198b83" title="get16le" alt="" coords="293,129,357,155"/>
+<area shape="rect" id="node3" href="$stb__image_8cpp.html#ace61fc7f5daabdb6dc0d60813346901a" title="refill_buffer" alt="" coords="502,53,589,79"/>
+</map>

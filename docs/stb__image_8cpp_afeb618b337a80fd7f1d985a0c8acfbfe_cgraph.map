@@ -1,0 +1,9 @@
+<map id="pic_load2" name="pic_load2">
+<area shape="rect" id="node2" href="$stb__image_8cpp.html#ae7d89884c32f0eb6edd8e7369031ae13" title="get8" alt="" coords="377,30,423,57"/>
+<area shape="rect" id="node4" href="$stb__image_8cpp.html#a8ab33004ad51977319641ade6494ec19" title="get8u" alt="" coords="271,30,326,57"/>
+<area shape="rect" id="node5" href="$stb__image_8cpp.html#ab31358888a33f78e7aa94da17114d8ce" title="at_eof" alt="" coords="269,106,328,133"/>
+<area shape="rect" id="node6" href="$stb__image_8cpp.html#a7e90ba3a72c7264ad4b1dcede5ab23d9" title="pic_readval" alt="" coords="132,68,220,94"/>
+<area shape="rect" id="node7" href="$stb__image_8cpp.html#a7e508ad33c579eceb4a6b4adff1f04ae" title="pic_copyval" alt="" coords="131,169,221,196"/>
+<area shape="rect" id="node8" href="$stb__image_8cpp.html#aa6f16d004643ea5c5c38c7198dc25141" title="get16" alt="" coords="271,182,326,209"/>
+<area shape="rect" id="node3" href="$stb__image_8cpp.html#ace61fc7f5daabdb6dc0d60813346901a" title="refill_buffer" alt="" coords="473,30,559,57"/>
+</map>

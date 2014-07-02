@@ -1,0 +1,11 @@
+<map id="parse_entropy_coded_data" name="parse_entropy_coded_data">
+<area shape="rect" id="node2" href="$stb__image_8cpp.html#a343f52bf3f58acf6a0d89c871625f49a" title="reset" alt="" coords="259,5,309,32"/>
+<area shape="rect" id="node3" href="$stb__image_8cpp.html#ad16407aaf8bb09760ba5aceaf52641bb" title="decode_block" alt="" coords="233,56,335,83"/>
+<area shape="rect" id="node5" href="$stb__image_8cpp.html#a0d5cd042c3f9d8dd94e1cba45c4ccfc0" title="grow_buffer_unsafe" alt="" coords="544,56,680,83"/>
+<area shape="rect" id="node9" href="$stb__image_8cpp.html#a94e68438bef489a32d3bbd388c216f61" title="idct_block" alt="" coords="243,157,325,184"/>
+<area shape="rect" id="node4" href="$stb__image_8cpp.html#a56921e2bc51ca531cdba1e5b7f280a9e" title="decode" alt="" coords="408,5,472,32"/>
+<area shape="rect" id="node8" href="$stb__image_8cpp.html#aef53e2b28f4d5de097bd53e68c8be3f6" title="extend_receive" alt="" coords="385,56,495,83"/>
+<area shape="rect" id="node6" href="$stb__image_8cpp.html#ae7d89884c32f0eb6edd8e7369031ae13" title="get8" alt="" coords="729,56,775,83"/>
+<area shape="rect" id="node7" href="$stb__image_8cpp.html#ace61fc7f5daabdb6dc0d60813346901a" title="refill_buffer" alt="" coords="825,56,911,83"/>
+<area shape="rect" id="node10" href="$stb__image_8cpp.html#a722efc991f747781c2e2655887bde8d4" title="clamp" alt="" coords="411,157,469,184"/>
+</map>

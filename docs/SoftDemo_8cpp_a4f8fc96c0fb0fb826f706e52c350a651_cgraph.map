@@ -1,0 +1,6 @@
+<map id="OpenMeshCube" name="OpenMeshCube">
+<area shape="rect" id="node2" href="$classMeshTools.html#a9995a6ef63ed5bd0a1c0ff9fb9378858" title="MeshTools::ctor_cube" alt="" coords="175,5,326,32"/>
+<area shape="rect" id="node3" href="$classMeshTools.html#a79dbad82ad427cf8cd17515fa446a25d" title="Make this mesh a cube. " alt="" coords="176,56,325,83"/>
+<area shape="rect" id="node4" href="$classMeshTools.html#a186f7d2e7e52b91103fd8456aca980e8" title="MeshTools::getVertices" alt="" coords="171,107,331,133"/>
+<area shape="rect" id="node5" href="$classMeshTools.html#afe6a5d4c26f7f84fc15d7aa6956296ff" title="MeshTools::getFaces" alt="" coords="177,157,325,184"/>
+</map>

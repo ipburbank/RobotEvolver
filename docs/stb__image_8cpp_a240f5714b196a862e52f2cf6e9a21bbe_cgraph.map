@@ -1,0 +1,9 @@
+<map id="compute_huffman_codes" name="compute_huffman_codes">
+<area shape="rect" id="node2" href="$stb__image_8cpp.html#a142a17daf34c0edfbc095f8fa8efd847" title="zreceive" alt="" coords="249,5,319,32"/>
+<area shape="rect" id="node5" href="$stb__image_8cpp.html#a72ef91abaf0df742fce9c4e364c6d060" title="zbuild_huffman" alt="" coords="229,107,339,133"/>
+<area shape="rect" id="node8" href="$stb__image_8cpp.html#ad2f594a73d27a89d1d38086be10b3b3d" title="zhuffman_decode" alt="" coords="221,56,347,83"/>
+<area shape="rect" id="node3" href="$stb__image_8cpp.html#a304a55b32f2e788727af78e089685c23" title="fill_bits" alt="" coords="407,31,470,57"/>
+<area shape="rect" id="node4" href="$stb__image_8cpp.html#a2ebb84646380f0e78bda46dce59201f4" title="zget8" alt="" coords="550,31,605,57"/>
+<area shape="rect" id="node6" href="$stb__image_8cpp.html#a47c6813ede053cd166e42770217deac1" title="bit_reverse" alt="" coords="395,93,482,120"/>
+<area shape="rect" id="node7" href="$stb__image_8cpp.html#ac4c294ebd942640259201ef8fe28306a" title="bitreverse16" alt="" coords="531,93,624,120"/>
+</map>

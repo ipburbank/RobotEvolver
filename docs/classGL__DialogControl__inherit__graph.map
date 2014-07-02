@@ -1,0 +1,5 @@
+<map id="GL_DialogControl" name="GL_DialogControl">
+<area shape="rect" id="node2" href="$structGL__SliderControl.html" title="GL_SliderControl" alt="" coords="5,80,125,107"/>
+<area shape="rect" id="node3" href="$structGL__TextControl.html" title="GL_TextControl" alt="" coords="151,80,265,107"/>
+<area shape="rect" id="node4" href="$structGL__ToggleControl.html" title="GL_ToggleControl" alt="" coords="290,80,416,107"/>
+</map>

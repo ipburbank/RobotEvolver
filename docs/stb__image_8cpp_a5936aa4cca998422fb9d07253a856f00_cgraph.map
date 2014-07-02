@@ -1,0 +1,14 @@
+<map id="stbi_gif_load_next" name="stbi_gif_load_next">
+<area shape="rect" id="node2" href="$stb__image_8cpp.html#a1f47abab89cb2ab9d8852cfe85b0003f" title="stbi_gif_header" alt="" coords="206,107,317,133"/>
+<area shape="rect" id="node3" href="$stb__image_8cpp.html#ae7d89884c32f0eb6edd8e7369031ae13" title="get8" alt="" coords="710,157,757,184"/>
+<area shape="rect" id="node6" href="$stb__image_8cpp.html#aeef53f9c6b757791340b398119198b83" title="get16le" alt="" coords="441,5,505,32"/>
+<area shape="rect" id="node7" href="$stb__image_8cpp.html#a40f6ab16ff132d5c4442b6b8878d5087" title="stbi_gif_parse_colortable" alt="" coords="390,157,557,184"/>
+<area shape="rect" id="node8" href="$stb__image_8cpp.html#a868f31c602124c2b606f47b8019e6ea8" title="stbi_fill_gif_background" alt="" coords="182,259,341,285"/>
+<area shape="rect" id="node9" href="$stb__image_8cpp.html#ad4e5fda66c64b2f0eb5799b4c2e7fcad" title="stbi_process_gif_raster" alt="" coords="183,309,340,336"/>
+<area shape="rect" id="node10" href="$stb__image_8cpp.html#a70132eb48871f2c3668bbd478eb2748c" title="skip" alt="" coords="450,411,497,437"/>
+<area shape="rect" id="node12" href="$stb__image_8cpp.html#a1d5e25109b08f7b9fd29d0748591e4c8" title="convert_format" alt="" coords="207,448,316,475"/>
+<area shape="rect" id="node5" href="$stb__image_8cpp.html#a8ab33004ad51977319641ade6494ec19" title="get8u" alt="" coords="606,157,661,184"/>
+<area shape="rect" id="node4" href="$stb__image_8cpp.html#ace61fc7f5daabdb6dc0d60813346901a" title="refill_buffer" alt="" coords="806,157,893,184"/>
+<area shape="rect" id="node11" href="$stb__image_8cpp.html#a9b6228119e98d838a41a0c6ec24666ad" title="stbi_out_gif_code" alt="" coords="411,309,535,336"/>
+<area shape="rect" id="node13" href="$stb__image_8cpp.html#afef9f8f44dd22cf7222c0553824d4f4f" title="compute_y" alt="" coords="430,461,517,488"/>
+</map>

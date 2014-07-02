@@ -1,0 +1,13 @@
+<map id="pic_load" name="pic_load">
+<area shape="rect" id="node2" href="$stb__image_8cpp.html#ae7d89884c32f0eb6edd8e7369031ae13" title="get8" alt="" coords="529,65,575,92"/>
+<area shape="rect" id="node4" href="$stb__image_8cpp.html#aa6f16d004643ea5c5c38c7198dc25141" title="get16" alt="" coords="301,40,355,66"/>
+<area shape="rect" id="node5" href="$stb__image_8cpp.html#ab31358888a33f78e7aa94da17114d8ce" title="at_eof" alt="" coords="421,242,480,269"/>
+<area shape="rect" id="node6" href="$stb__image_8cpp.html#af0cf46c0fd30cf9aa5478c5e59cabdce" title="get32" alt="" coords="153,90,207,117"/>
+<area shape="rect" id="node7" href="$stb__image_8cpp.html#afeb618b337a80fd7f1d985a0c8acfbfe" title="pic_load2" alt="" coords="141,141,219,168"/>
+<area shape="rect" id="node11" href="$stb__image_8cpp.html#a1d5e25109b08f7b9fd29d0748591e4c8" title="convert_format" alt="" coords="125,394,235,421"/>
+<area shape="rect" id="node3" href="$stb__image_8cpp.html#ace61fc7f5daabdb6dc0d60813346901a" title="refill_buffer" alt="" coords="625,65,711,92"/>
+<area shape="rect" id="node8" href="$stb__image_8cpp.html#a8ab33004ad51977319641ade6494ec19" title="get8u" alt="" coords="423,141,478,168"/>
+<area shape="rect" id="node9" href="$stb__image_8cpp.html#a7e90ba3a72c7264ad4b1dcede5ab23d9" title="pic_readval" alt="" coords="284,192,372,218"/>
+<area shape="rect" id="node10" href="$stb__image_8cpp.html#a7e508ad33c579eceb4a6b4adff1f04ae" title="pic_copyval" alt="" coords="283,293,373,320"/>
+<area shape="rect" id="node12" href="$stb__image_8cpp.html#afef9f8f44dd22cf7222c0553824d4f4f" title="compute_y" alt="" coords="285,394,371,421"/>
+</map>

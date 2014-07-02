@@ -1,0 +1,7 @@
+<map id="stbi_hdr_info" name="stbi_hdr_info">
+<area shape="rect" id="node2" href="$stb__image_8cpp.html#ab33e40eedec8923b099b0262b5784173" title="hdr_gettoken" alt="" coords="150,31,247,57"/>
+<area shape="rect" id="node6" href="$stb__image_8cpp.html#a68ecfb7bf76eae3a09f27ba97ad0d341" title="stbi_rewind" alt="" coords="155,81,243,108"/>
+<area shape="rect" id="node3" href="$stb__image_8cpp.html#ae7d89884c32f0eb6edd8e7369031ae13" title="get8" alt="" coords="302,5,349,32"/>
+<area shape="rect" id="node5" href="$stb__image_8cpp.html#ab31358888a33f78e7aa94da17114d8ce" title="at_eof" alt="" coords="296,56,355,83"/>
+<area shape="rect" id="node4" href="$stb__image_8cpp.html#ace61fc7f5daabdb6dc0d60813346901a" title="refill_buffer" alt="" coords="403,5,490,32"/>
+</map>

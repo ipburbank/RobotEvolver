@@ -1,0 +1,8 @@
+<map id="stbi_is_hdr_from_callbacks" name="stbi_is_hdr_from_callbacks">
+<area shape="rect" id="node2" href="$stb__image_8cpp.html#a5b1b92f6b086a05bbfd6c0eeef39f51d" title="start_callbacks" alt="" coords="518,5,629,32"/>
+<area shape="rect" id="node4" href="$stb__image_8cpp.html#a6e9b8b19d7eaf58f83433e821ceedbb2" title="stbi_hdr_test" alt="" coords="235,56,333,83"/>
+<area shape="rect" id="node3" href="$stb__image_8cpp.html#ace61fc7f5daabdb6dc0d60813346901a" title="refill_buffer" alt="" coords="678,31,765,57"/>
+<area shape="rect" id="node5" href="$stb__image_8cpp.html#aecb01879b94528123e244c3f8d36ece6" title="hdr_test" alt="" coords="391,56,460,83"/>
+<area shape="rect" id="node7" href="$stb__image_8cpp.html#a68ecfb7bf76eae3a09f27ba97ad0d341" title="stbi_rewind" alt="" coords="381,107,469,133"/>
+<area shape="rect" id="node6" href="$stb__image_8cpp.html#ae7d89884c32f0eb6edd8e7369031ae13" title="get8" alt="" coords="550,56,597,83"/>
+</map>

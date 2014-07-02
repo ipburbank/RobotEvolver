@@ -1,0 +1,10 @@
+<map id="stbi_gif_info" name="stbi_gif_info">
+<area shape="rect" id="node2" href="$stb__image_8cpp.html#af51f96d12514eb0ba0ff733027af44d6" title="stbi_gif_info_raw" alt="" coords="147,54,267,81"/>
+<area shape="rect" id="node3" href="$stb__image_8cpp.html#a1f47abab89cb2ab9d8852cfe85b0003f" title="stbi_gif_header" alt="" coords="315,29,426,55"/>
+<area shape="rect" id="node9" href="$stb__image_8cpp.html#a68ecfb7bf76eae3a09f27ba97ad0d341" title="stbi_rewind" alt="" coords="327,79,415,106"/>
+<area shape="rect" id="node4" href="$stb__image_8cpp.html#ae7d89884c32f0eb6edd8e7369031ae13" title="get8" alt="" coords="803,29,850,55"/>
+<area shape="rect" id="node6" href="$stb__image_8cpp.html#a8ab33004ad51977319641ade6494ec19" title="get8u" alt="" coords="695,29,750,55"/>
+<area shape="rect" id="node7" href="$stb__image_8cpp.html#aeef53f9c6b757791340b398119198b83" title="get16le" alt="" coords="691,91,755,118"/>
+<area shape="rect" id="node8" href="$stb__image_8cpp.html#a40f6ab16ff132d5c4442b6b8878d5087" title="stbi_gif_parse_colortable" alt="" coords="475,54,642,81"/>
+<area shape="rect" id="node5" href="$stb__image_8cpp.html#ace61fc7f5daabdb6dc0d60813346901a" title="refill_buffer" alt="" coords="899,29,986,55"/>
+</map>
