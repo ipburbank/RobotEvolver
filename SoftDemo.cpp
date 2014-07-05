@@ -606,7 +606,7 @@ static void Init_CustomCube(SoftDemo* pdemo)
 
 
   btSoftBody* psb5 = OpenMeshCube(pdemo);
-  psb5->translate(btVector3(8,0,0));
+  psb5->translate(btVector3(10,0,0));
   psb5->m_cfg.piterations=1;
 	
   psb5->generateClusters(4);
