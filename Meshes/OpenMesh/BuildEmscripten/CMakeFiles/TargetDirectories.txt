@@ -1,7 +1,0 @@
-/home/istvan/Desktop/RobotEvolver/master/Meshes/OpenMesh/BuildEmscripten/src/OpenMesh/Core/CMakeFiles/OpenMeshCore.dir
-/home/istvan/Desktop/RobotEvolver/master/Meshes/OpenMesh/BuildEmscripten/src/OpenMesh/Core/CMakeFiles/OpenMeshCoreStatic.dir
-/home/istvan/Desktop/RobotEvolver/master/Meshes/OpenMesh/BuildEmscripten/src/OpenMesh/Tools/CMakeFiles/OpenMeshTools.dir
-/home/istvan/Desktop/RobotEvolver/master/Meshes/OpenMesh/BuildEmscripten/src/OpenMesh/Tools/CMakeFiles/OpenMeshToolsStatic.dir
-/home/istvan/Desktop/RobotEvolver/master/Meshes/OpenMesh/BuildEmscripten/CMakeFiles/PACKAGE_SOURCE.dir
-/home/istvan/Desktop/RobotEvolver/master/Meshes/OpenMesh/BuildEmscripten/Doc/CMakeFiles/doc.dir
-/home/istvan/Desktop/RobotEvolver/master/Meshes/OpenMesh/BuildEmscripten/Doc/CMakeFiles/doc-install.dir

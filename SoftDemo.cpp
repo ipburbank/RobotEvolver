@@ -492,11 +492,9 @@ static btSoftBody* OpenMeshCube(SoftDemo* pdemo)
   std::vector<float> verts = testCube.getVertices();
   std::vector<std::array<int, 3>> faces = testCube.getFaces();
 
-  static Real* gVerticesCube = (Real*) &verts[0];
+  Real* gVerticesCube = (Real*) &verts[0];
   
-  static int (*gIndicesCube)[3] = (int(*)[3]) new int[faces.size()*3];
-
-  printf("faces: %i\n", verts.size());
+  int (*gIndicesCube)[3] = (int(*)[3]) new int[faces.size()*3];
 
   //read the faces into the array
   for(int i = 0; i < faces.size(); i++)
@@ -508,7 +506,7 @@ static btSoftBody* OpenMeshCube(SoftDemo* pdemo)
     }
 
   btSoftBody* psb=btSoftBodyHelpers::CreateFromTriMesh( pdemo->m_softBodyWorldInfo, gVerticesCube, &gIndicesCube[0][0], faces.size());
-  //pdemo->getSoftDynamicsWorld()->addSoftBody(psb);
+  btSoftBody* psb2=btSoftBodyHelpers::CreateFromTriMesh( pdemo->m_softBodyWorldInfo, gVerticesCube, &gIndicesCube[0][0], faces.size());
 
   delete [](int*)gIndicesCube;
 
@@ -523,6 +521,7 @@ static void Init_CustomCube(SoftDemo* pdemo)
 {
         
   btSoftBody* psb1 = OpenMeshCube(pdemo);
+  psb1->translate(btVector3(0,0,0));
   psb1->m_cfg.piterations=1;
 	
   psb1->generateClusters(4);
@@ -530,12 +529,13 @@ static void Init_CustomCube(SoftDemo* pdemo)
 
 
   psb1->m_materials[0]->m_kLST	=	0.15;
-  psb1->m_cfg.kVC			=	20;
+  psb1->m_cfg.kVC			=	100;
+  psb1->m_cfg.kMT			=	0.25;
   psb1->setTotalMass(50,true);
   psb1->setPose(true,true); //try to return to the 'lowest
   //energy state'
 
-  psb1->m_pose.m_volume -= 20.5;
+  //psb1->m_pose.m_volume -= 20.5;
   //psb1->m_cfg.kPR = 2000;
   pdemo->getSoftDynamicsWorld()->addSoftBody(psb1);
 
@@ -544,8 +544,7 @@ static void Init_CustomCube(SoftDemo* pdemo)
 
   
   btSoftBody* psb2=OpenMeshCube(pdemo);
-
-
+  psb2->translate(btVector3(1,0,0));
   psb2->m_cfg.piterations=1;
 	
   psb2->generateClusters(4);
@@ -553,14 +552,76 @@ static void Init_CustomCube(SoftDemo* pdemo)
 
 
   psb2->m_materials[0]->m_kLST	=	0.15;
-  psb2->m_cfg.kVC	       	=	20;
+  psb2->m_cfg.kVC	       	=	100;
   psb2->setTotalMass(50,true);
   psb2->setPose(true,true); //try to return to the 'lowest
   //energy state'
 
-  psb2->m_pose.m_volume += 20.5;
+  //psb2->m_pose.m_volume += 20.5;
 
   pdemo->getSoftDynamicsWorld()->addSoftBody(psb2);
+
+
+
+      
+  btSoftBody* psb3 = OpenMeshCube(pdemo);
+  psb3->translate(btVector3(2,0,0));
+  psb3->m_cfg.piterations=1;
+	
+  psb3->generateClusters(4);
+  psb3->getCollisionShape()->setMargin(0.01);
+
+
+  psb3->m_materials[0]->m_kLST	=	0.15;
+  psb3->m_cfg.kVC			=	100;
+  psb3->m_cfg.kMT			=	0;
+  psb3->setTotalMass(50,true);
+  psb3->setPose(true,true); //try to return to the 'lowest
+  //energy state'
+
+  //psb1->m_pose.m_volume -= 20.5;
+  psb3->m_cfg.kPR = 2000;
+  pdemo->getSoftDynamicsWorld()->addSoftBody(psb3);
+  
+
+
+  btSoftBody* psb4 = OpenMeshCube(pdemo);
+  psb4->translate(btVector3(8,0,0));
+  psb4->m_cfg.piterations=1;
+	
+  psb4->generateClusters(4);
+  psb4->getCollisionShape()->setMargin(0.01);
+
+
+  psb4->m_materials[0]->m_kLST	=	0.15;
+  psb4->m_cfg.kVC			=	100;
+  psb4->m_cfg.kMT			=	0;
+  psb4->setTotalMass(50,true);
+  psb4->setPose(true,true); //try to return to the 'lowest
+  //energy state'
+  psb4->m_pose.m_volume = .5;
+
+  pdemo->getSoftDynamicsWorld()->addSoftBody(psb4);
+
+
+
+  btSoftBody* psb5 = OpenMeshCube(pdemo);
+  psb5->translate(btVector3(8,0,0));
+  psb5->m_cfg.piterations=1;
+	
+  psb5->generateClusters(4);
+  psb5->getCollisionShape()->setMargin(0.01);
+
+
+  psb5->m_materials[0]->m_kLST	=	0.15;
+  psb5->m_cfg.kVC			=	100;
+  psb5->m_cfg.kMT			=	0;
+  psb5->setTotalMass(50,true);
+  psb5->setPose(true,true); //try to return to the 'lowest
+  //energy state'
+  psb5->m_pose.m_volume = 2.5;
+
+  pdemo->getSoftDynamicsWorld()->addSoftBody(psb5);
   
   pdemo->m_autocam=true;
 }
@@ -641,7 +702,7 @@ void	SoftDemo::clientResetScene()
 
 
   m_softBodyWorldInfo.air_density		=	(btScalar)1.2;
-  m_softBodyWorldInfo.water_density	=	0;
+  m_softBodyWorldInfo.water_density	        =	0;
   m_softBodyWorldInfo.water_offset		=	0;
   m_softBodyWorldInfo.water_normal		=	btVector3(0,0,0);
   m_softBodyWorldInfo.m_gravity.setValue(0,-10,0);

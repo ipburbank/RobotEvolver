@@ -1,1 +1,0 @@
-/usr/lib/emscripten/emar rc libConvexDecomposition.a  @CMakeFiles/ConvexDecomposition.dir/objects1.rsp

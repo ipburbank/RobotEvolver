@@ -1,1 +1,0 @@
-/usr/lib/emscripten/emar rc libBulletXmlWorldImporter.a  @CMakeFiles/BulletXmlWorldImporter.dir/objects1.rsp
