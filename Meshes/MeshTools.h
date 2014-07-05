@@ -7,6 +7,8 @@
 #include <OpenMesh/Core/Mesh/TriMesh_ArrayKernelT.hh>
 #include <OpenMesh/Core/Mesh/TriConnectivity.hh>
 
+#include <OpenMesh/Tools/Subdivider/Uniform/LongestEdgeT.hh>
+#include <OpenMesh/Tools/Subdivider/Uniform/LoopT.hh>
 #include <OpenMesh/Tools/Subdivider/Uniform/Sqrt3T.hh>
 #include <OpenMesh/Tools/Subdivider/Uniform/Composite/CompositeT.hh>
 #include <OpenMesh/Tools/Subdivider/Uniform/CompositeLoopT.hh>
@@ -29,7 +31,7 @@ std::vector<float> getVertices();
 std::vector<std::array<int, 3>> getFaces();
 
 MeshT ctor_cube(); /** Make this mesh a cube */
-MeshT subdivide(int divisions); /** Subdivide this mesh */
+MeshT subdivide(float maxEdgeLen); /** Subdivide this mesh */
 };
 
 #endif

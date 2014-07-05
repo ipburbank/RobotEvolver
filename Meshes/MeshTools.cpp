@@ -101,15 +101,16 @@ MeshT MeshTools::ctor_cube()
   return mesh;
 }
 
-MeshT MeshTools::subdivide(int divisions)
+MeshT MeshTools::subdivide(float maxEdgeLen)
 {
   // Initialize subdivider
   
-  OpenMesh::Subdivider::Uniform::Sqrt3T<MeshT> subdivider;
-  
+  OpenMesh::Subdivider::Uniform::LongestEdgeT<MeshT> subdivider;
+  subdivider.set_max_edge_length(maxEdgeLen);
+
   // Execute subdivision
   subdivider.attach(mesh);
-  subdivider( divisions );
+  subdivider(0);
   subdivider.detach();
   
   return mesh;

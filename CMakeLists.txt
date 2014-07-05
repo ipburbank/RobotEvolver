@@ -8,6 +8,9 @@ cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Ofast")
+set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -Wall -g")
+
 #find bullet
 include_directories(SYSTEM Libraries/bullet/src) #to avoid errors from c++11
 SET(BULLET_VERSION 2.82)
@@ -21,15 +24,15 @@ add_subdirectory(BulletDemoFiles)
 
 
 #all compiles after this use c++11
-set(CMAKE_CXX_FLAGS "-std=c++11 -g")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 add_subdirectory(Meshes)
 
 
-add_executable(softapp.app main.cpp SoftDemo.cpp)
-target_link_libraries(softapp.app MeshTools  BulletDemoFiles BulletSoftBody BulletDynamics BulletCollision LinearMath OpenMeshCore OpenMeshTools)
+add_executable(softapp main.cpp SoftDemo.cpp)
+target_link_libraries(softapp MeshTools  BulletDemoFiles BulletSoftBody BulletDynamics BulletCollision LinearMath OpenMeshCore OpenMeshTools)
 
 #system libraries
-target_link_libraries(softapp.app -lglut)
-target_link_libraries(softapp.app -lGL)
-target_link_libraries(softapp.app -lGLU)
+target_link_libraries(softapp -lglut)
+target_link_libraries(softapp -lGL)
+target_link_libraries(softapp -lGLU)

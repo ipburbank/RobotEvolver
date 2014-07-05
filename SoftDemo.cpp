@@ -487,7 +487,7 @@ static btSoftBody* OpenMeshCube(SoftDemo* pdemo)
 {
   MeshTools testCube;
   testCube.ctor_cube();
-  testCube.subdivide(2);
+  testCube.subdivide(0.5);
 
   std::vector<float> verts = testCube.getVertices();
   std::vector<std::array<int, 3>> faces = testCube.getFaces();
