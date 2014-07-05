@@ -30,6 +30,7 @@ subject to the following restrictions:
 #include "BulletSoftBody/btSoftBody.h"
 
 #include "Meshes/MeshTools.h"
+#include "BulletExtensions/VertexJoint.h"
 
 class btBroadphaseInterface;
 class btCollisionShape;

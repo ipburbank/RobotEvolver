@@ -539,7 +539,30 @@ static void Init_CustomCube(SoftDemo* pdemo)
   //psb1->m_cfg.kPR = 2000;
   pdemo->getSoftDynamicsWorld()->addSoftBody(psb1);
 
+  btSoftBody* psb15 = OpenMeshCube(pdemo);
+  psb15->translate(btVector3(0,0,0));
+  psb15->m_cfg.piterations=1;
+	
+  psb15->generateClusters(4);
+  psb15->getCollisionShape()->setMargin(0.01);
 
+
+  psb15->m_materials[0]->m_kLST	=	0.15;
+  psb15->m_cfg.kVC			=	100;
+  psb15->m_cfg.kMT			=	0.25;
+  psb15->setTotalMass(50,true);
+  psb15->setPose(true,true); //try to return to the 'lowest
+  //energy state'
+
+  //psb1->m_pose.m_volume -= 20.5;
+  //psb1->m_cfg.kPR = 2000;
+  pdemo->getSoftDynamicsWorld()->addSoftBody(psb15);
+
+  //testing joint stuff
+  VertexJoint* vj = new(btAlignedAlloc(sizeof(VertexJoint),16)) VertexJoint();
+  vj->addVertex(psb1, 0);
+  vj->addVertex(psb15, 0);
+  psb15->m_joints.push_back(vj);
 
 
   
@@ -611,7 +634,6 @@ static void Init_CustomCube(SoftDemo* pdemo)
 	
   psb5->generateClusters(4);
   psb5->getCollisionShape()->setMargin(0.01);
-
 
   psb5->m_materials[0]->m_kLST	=	0.15;
   psb5->m_cfg.kVC			=	100;

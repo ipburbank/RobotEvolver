@@ -11,26 +11,29 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Ofast")
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -Wall -g")
 
-#find bullet
+#bullet
 include_directories(SYSTEM Libraries/bullet/src) #to avoid errors from c++11
 SET(BULLET_VERSION 2.82)
 add_subdirectory(Libraries/bullet/src)
+
+#bullet demo files
+add_subdirectory(BulletDemoFiles)
+
+#all compiles after this use c++11
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 #OpenMesh
 include_directories(Libraries/OpenMesh/src)
 add_subdirectory(Libraries/OpenMesh)
 
-add_subdirectory(BulletDemoFiles)
-
-
-#all compiles after this use c++11
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+#libraries
+add_subdirectory(BulletExtensions)
 
 add_subdirectory(Meshes)
 
 
 add_executable(softapp main.cpp SoftDemo.cpp)
-target_link_libraries(softapp MeshTools  BulletDemoFiles BulletSoftBody BulletDynamics BulletCollision LinearMath OpenMeshCore OpenMeshTools)
+target_link_libraries(softapp MeshTools BulletDemoFiles BulletExtensions BulletSoftBody BulletDynamics BulletCollision LinearMath OpenMeshCore OpenMeshTools)
 
 #system libraries
 target_link_libraries(softapp -lglut)

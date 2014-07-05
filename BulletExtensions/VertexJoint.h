@@ -1,32 +1,35 @@
 #ifndef VERTEX_JOINT_H
 #define VERTEX_JOINT_H
 
+#include "BulletSoftBody/btSoftBody.h"
+#include <vector>
+
 class VertexJoint: public btSoftBody::Joint {
  public:
   VertexJoint(){};
-
+  
+  void addVertex(btSoftBody* soft_body, size_t vertex_id);
+  
   // ### Overriden from btSoftBody::Joint #####
   void Prepare(btScalar dt,int iterations){}; // I don't need this
-  void Solve(btScalar dt,btScalar sor);
-  void Terminate(btScalar dt){}; // I don't need this there
+  void Solve(btScalar dt, btScalar sor);
+  void Terminate(btScalar dt){}; // I don't need this
   btSoftBody::Joint::eType::_ Type() const;
   // ##########################################
 
-  ~VertexJoint(){...};
+  ~VertexJoint(){};
  private:
 
   struct Attach
   {
-    size_t attached_vertex_id;
-    size_t attached_to_tetrahedra_id;
-    btVector3 barycentric_coordinates;
+    btSoftBody* soft_body;
+    size_t vertex_id;
   };
-  std::vector<Attach> attachments;
+  std::vector<Attach> m_attachments;
 
-  bool initJoint(){}; // generating Attach
+  bool initJoint(){}; //generating Attach
 
-  btSBObject* main_soft_body;
-  btSBObject* attached_soft_body;
+  btSoftBody* m_main_soft_body;
 };
 
 #endif
