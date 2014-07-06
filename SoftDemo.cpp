@@ -313,20 +313,6 @@ struct	ImplicitSphere : btSoftBody::ImplicitFn
 };
 
 //
-// Tetra meshes
-//
-
-struct	TetraBunny
-{
-#include "Meshes/bunny.inl"
-};
-
-struct	TetraCube
-{
-#include "Meshes/cube.inl"
-};
-
-//
 // Random
 //
 
@@ -344,143 +330,6 @@ static inline btVector3	Vector3Rand()
 {
   const btVector3	p=btVector3(SignedUnitRand(),SignedUnitRand(),SignedUnitRand());
   return(p.normalized());
-}
-
-
-
-//
-// Big plate
-//
-static btRigidBody*	Ctor_BigPlate(SoftDemo* pdemo,btScalar mass=15,btScalar height=4)
-{
-  btTransform startTransform;
-  startTransform.setIdentity();
-  startTransform.setOrigin(btVector3(0,height,0.5));
-  btRigidBody*		body=pdemo->localCreateRigidBody(mass,startTransform,new btBoxShape(btVector3(5,1,5)));
-  body->setFriction(1);
-  return(body);
-}
-
-//
-// Linear stair
-//
-static void Ctor_LinearStair(SoftDemo* pdemo,const btVector3& org,const btVector3& sizes,btScalar angle,int count)
-{
-  btBoxShape*	shape=new btBoxShape(sizes);
-  for(int i=0;i<count;++i)
-    {
-      btTransform startTransform;
-      startTransform.setIdentity();
-      startTransform.setOrigin(org+btVector3(sizes.x()*i*2,sizes.y()*i*2,0));
-      btRigidBody* body=pdemo->localCreateRigidBody(0,startTransform,shape);
-      body->setFriction(1);
-    }
-}
-
-//
-// Volume conservation
-//
-static void	Init_Volume(SoftDemo* pdemo)
-{
-  btSoftBody* psb=btSoftBodyHelpers::CreateEllipsoid(pdemo->m_softBodyWorldInfo,btVector3(35,25,0),
-                                                     btVector3(1,1,1)*3,
-                                                     512);
-  psb->m_materials[0]->m_kLST	=	0.45;
-  psb->m_cfg.kVC			=	20;
-  psb->setTotalMass(50,true);
-  psb->setPose(true,false);
-  pdemo->getSoftDynamicsWorld()->addSoftBody(psb);
-
-  Ctor_BigPlate(pdemo);
-  Ctor_LinearStair(pdemo,btVector3(0,0,0),btVector3(2,1,5),0,10);
-  pdemo->m_autocam=true;
-
-}
-
-//
-// TetraCube
-//
-static void Init_TetraCube(SoftDemo* pdemo)
-{
-  btSoftBody* psb=btSoftBodyHelpers::CreateFromTetGenData(pdemo->m_softBodyWorldInfo,
-                                                          TetraCube::getElements(),
-                                                          0,
-                                                          TetraCube::getNodes(),
-                                                          false,true,true);
-  /*btSoftBody*     psb=btSoftBodyHelpers::CreateEllipsoid(pdemo->m_softBodyWorldInfo,btVector3(35,25,0),
-    btVector3(1,1,1)*3,
-    512);*/
-
-  
-  psb->m_materials[0]->m_kLST     =       0.1;
-  psb->m_cfg.kDF                          =       1;
-  psb->m_cfg.kDP                          =       0.001; // fun factor...
-  //psb->m_cfg.kPR                          =       2500;
-  psb->setTotalMass(30,true);
-  
-  pdemo->getSoftDynamicsWorld()->addSoftBody(psb);
-
-
-  /*
-    pdemo->getSoftDynamicsWorld()->addSoftBody(psb);
-    psb->scale(btVector3(4,4,4));
-    psb->translate(btVector3(0,5,0));
-    psb->setVolumeMass(300);
-	
-	
-    ///fix one vertex
-    //psb->setMass(0,0);
-    //psb->setMass(10,0);
-    //psb->setMass(20,0);
-    psb->m_cfg.piterations=1;
-    //psb->generateClusters(128);
-    psb->generateClusters(16);
-    //psb->getCollisionShape()->setMargin(0.5);
-
-    psb->getCollisionShape()->setMargin(0.01);
-    psb->m_cfg.collisions	=	btSoftBody::fCollision::CL_SS+	btSoftBody::fCollision::CL_RS
-    //+ btSoftBody::fCollision::CL_SELF
-    ;
-    psb->m_materials[0]->m_kLST=0.8;
-    //	psb->m_cfg.kPR 		=	2000;//pressure
-    pdemo->m_cutting=false;	*/
-  pdemo->m_autocam=true;
-}
-
-static btSoftBody* Ctor_TriBox(SoftDemo* pdemo)
-{
-  static Real gVerticesCube[] =
-    {
-      1, 1, 1,
-      1, 1,-1,
-      -1,1,-1,
-      -1,1,1,
-      1, -1, 1,
-      1, -1,-1,
-      -1,-1,-1,
-      -1,-1,1
-    };
-
-  static int gIndicesCube[][3] =
-    {
-      {0, 1, 2},
-      {0, 2, 3},
-      {4, 6, 5},
-      {4, 7, 6},
-      {0, 5, 1},
-      {0, 4, 5},
-      {0, 7, 4},
-      {0, 3, 7},
-      {3, 6, 7},
-      {3, 2, 6},
-      {1, 6, 2},
-      {1, 5, 6}
-    };
-
-  btSoftBody* psb=btSoftBodyHelpers::CreateFromTriMesh( pdemo->m_softBodyWorldInfo, gVerticesCube, &gIndicesCube[0][0], 12);
-  pdemo->getSoftDynamicsWorld()->addSoftBody(psb);
-
-  return psb;
 }
 
 static btSoftBody* OpenMeshCube(SoftDemo* pdemo)
@@ -554,7 +403,7 @@ static void Init_CustomCube(SoftDemo* pdemo)
   psb15->setPose(true,true); //try to return to the 'lowest
   //energy state'
 
-  //psb1->m_pose.m_volume -= 20.5;
+  psb15->m_pose.m_volume = 2.5;
   //psb1->m_cfg.kPR = 2000;
   pdemo->getSoftDynamicsWorld()->addSoftBody(psb15);
 
@@ -641,7 +490,6 @@ static void Init_CustomCube(SoftDemo* pdemo)
   psb5->setTotalMass(50,true);
   psb5->setPose(true,true); //try to return to the 'lowest
   //energy state'
-  psb5->m_pose.m_volume = 2.5;
 
   pdemo->getSoftDynamicsWorld()->addSoftBody(psb5);
   

@@ -23,15 +23,15 @@ GLDebugDrawer	gDebugDrawer;
 
 int main(int argc,char** argv)
 {
-SoftDemo* softDemo = new SoftDemo();
+  SoftDemo* softDemo = new SoftDemo();
 
-softDemo->initPhysics();
-softDemo->getDynamicsWorld()->setDebugDrawer(&gDebugDrawer);
+  softDemo->initPhysics();
+  softDemo->getDynamicsWorld()->setDebugDrawer(&gDebugDrawer);
 
 
-glutmain(argc, argv,1024,768,"RobotEvolver",softDemo);
+  glutmain(argc, argv,1024,768,"RobotEvolver",softDemo);
 
-delete softDemo;
-return 0;
+  delete softDemo;
+  return 0;
 
 }

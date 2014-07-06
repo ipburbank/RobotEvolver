@@ -92,7 +92,7 @@ else()
 	set (OPENMESH_LIBRARY_DIR "${_OPENMESH_LIBRARY_DIR}" CACHE PATH "The directory where the OpenMesh libraries can be found.")
 endif()
 
-add_subdirectory (Doc)
+#add_subdirectory (Doc)
 
 # ========================================================================
 # Bundle generation (Targets exist, now configure them)
