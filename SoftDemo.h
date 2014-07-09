@@ -31,6 +31,8 @@ subject to the following restrictions:
 
 #include "Meshes/MeshTools.h"
 #include "BulletExtensions/VertexJoint.h"
+#include "BulletExtensions/TickCallbacks.h"
+#include <math.h> 
 
 class btBroadphaseInterface;
 class btCollisionShape;
@@ -141,7 +143,6 @@ public:
 	void	keyboardCallback(unsigned char key, int x, int y);
 	void	mouseFunc(int button, int state, int x, int y);
 	void	mouseMotionFunc(int x,int y);
-
 };
 
 #define MACRO_SOFT_DEMO(a) class SoftDemo##a : public SoftDemo\
@@ -158,7 +159,7 @@ public:\
 	}\
 };
 
-
 MACRO_SOFT_DEMO(0) //Init my demo
+
 
 #endif //CCD_PHYSICS_DEMO_H

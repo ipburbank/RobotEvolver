@@ -212,6 +212,9 @@ public:
 
 #endif //USE_AMD_OPENCL
 
+//TICK CALLBACKS
+TickCallbacks preTickCallbackHandler;
+
 //
 void SoftDemo::createStack( btCollisionShape* boxShape, float halfCubeSize, int size, float zPos )
 {
@@ -245,6 +248,11 @@ void SoftDemo::createStack( btCollisionShape* boxShape, float halfCubeSize, int 
 
 extern int gNumManifold;
 extern int gOverlappingPairs;
+
+
+/**
+   PRE TICK CALLBACKS
+ */
 
 ///for mouse picking
 void pickingPreTickCallback (btDynamicsWorld *world, btScalar timeStep)
@@ -281,7 +289,17 @@ void pickingPreTickCallback (btDynamicsWorld *world, btScalar timeStep)
 
 }
 
+std::vector<btSoftBody*> muscleBodys;
 
+void musclePreTickCallback (btDynamicsWorld *world, btScalar timeStep)
+{
+  static float timer;
+  timer += timeStep;
+  for(int i = 0; i < muscleBodys.size(); i++)
+    {
+      muscleBodys[i]->m_pose.m_volume = 8 + 4*sinf(timer);
+    }
+}
 
 void SoftDemo::displayCallback(void) {
 
@@ -311,26 +329,6 @@ struct	ImplicitSphere : btSoftBody::ImplicitFn
     return((x-center).length2()-sqradius);
   }
 };
-
-//
-// Random
-//
-
-static inline btScalar	UnitRand()
-{
-  return(rand()/(btScalar)RAND_MAX);
-}
-
-static inline btScalar	SignedUnitRand()
-{
-  return(UnitRand()*2-1);
-}
-
-static inline btVector3	Vector3Rand()
-{
-  const btVector3	p=btVector3(SignedUnitRand(),SignedUnitRand(),SignedUnitRand());
-  return(p.normalized());
-}
 
 static btSoftBody* OpenMeshCube(SoftDemo* pdemo)
 {
@@ -492,6 +490,25 @@ static void Init_CustomCube(SoftDemo* pdemo)
   //energy state'
 
   pdemo->getSoftDynamicsWorld()->addSoftBody(psb5);
+
+
+  //testmuscle
+  btSoftBody* psb6 = OpenMeshCube(pdemo);
+  psb6->translate(btVector3(13,0,0));
+  psb6->m_cfg.piterations=1;
+	
+  psb6->generateClusters(4);
+  psb6->getCollisionShape()->setMargin(0.01);
+
+  psb6->m_materials[0]->m_kLST	=	0.15;
+  psb6->m_cfg.kVC			=	100;
+  psb6->m_cfg.kMT			=	0;
+  psb6->setTotalMass(50,true);
+  psb6->setPose(true,true); //try to return to the 'lowest
+  //energy state
+
+  muscleBodys.push_back(psb6);
+  pdemo->getSoftDynamicsWorld()->addSoftBody(psb6);
   
   pdemo->m_autocam=true;
 }
@@ -1033,7 +1050,6 @@ void	SoftDemo::mouseFunc(int button, int state, int x, int y)
     }
 }
 
-
 void	SoftDemo::initPhysics()
 {
   ///create concave ground mesh
@@ -1172,7 +1188,11 @@ void	SoftDemo::initPhysics()
 
   btDiscreteDynamicsWorld* world = new btSoftRigidDynamicsWorld(m_dispatcher,m_broadphase,m_solver,m_collisionConfiguration,softBodySolver);
   m_dynamicsWorld = world;
-  m_dynamicsWorld->setInternalTickCallback(pickingPreTickCallback,this,true);
+  
+  preTickCallbackHandler.addCallback(pickingPreTickCallback);
+  preTickCallbackHandler.addCallback(musclePreTickCallback);
+
+  m_dynamicsWorld->setInternalTickCallback(preTickCallbackHandler.runCallbacks,this,true);//pretick
 
 
   m_dynamicsWorld->getDispatchInfo().m_enableSPU = true;

@@ -1,1 +1,1 @@
-add_library(BulletExtensions VertexJoint.cpp)
+add_library(BulletExtensions VertexJoint.cpp TickCallbacks)

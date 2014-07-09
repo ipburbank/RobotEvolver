@@ -15,7 +15,6 @@ btSoftBody::Joint::eType::_ VertexJoint::Type() const{
 
 void VertexJoint::Solve(btScalar dt,btScalar sor)
 {
-
   // FIND THE CENTER POINT FOR THE VERTS
   btVector3 averagePosition = btVector3(0,0,0);
   
