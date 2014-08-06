@@ -330,11 +330,11 @@ struct	ImplicitSphere : btSoftBody::ImplicitFn
   }
 };
 
-static btSoftBody* OpenMeshCube(SoftDemo* pdemo)
+static btSoftBody* OpenMeshCube(SoftDemo* pdemo, int divisions)
 {
   MeshTools testCube;
   testCube.ctor_cube();
-  testCube.subdivide(0.5);
+  if(divisions) testCube.subdivide(divisions);
 
   std::vector<float> verts = testCube.getVertices();
   std::vector<std::array<int, 3>> faces = testCube.getFaces();
@@ -353,7 +353,6 @@ static btSoftBody* OpenMeshCube(SoftDemo* pdemo)
     }
 
   btSoftBody* psb=btSoftBodyHelpers::CreateFromTriMesh( pdemo->m_softBodyWorldInfo, gVerticesCube, &gIndicesCube[0][0], faces.size());
-  btSoftBody* psb2=btSoftBodyHelpers::CreateFromTriMesh( pdemo->m_softBodyWorldInfo, gVerticesCube, &gIndicesCube[0][0], faces.size());
 
   delete [](int*)gIndicesCube;
 
@@ -361,12 +360,69 @@ static btSoftBody* OpenMeshCube(SoftDemo* pdemo)
 }
 
 
+static std::vector<std::pair<int, int>>* OpenMeshCubeJoints(int divisions)
+{
+  MeshTools testCube;
+  testCube.ctor_cube();
+  if(divisions) testCube.subdivide(divisions);
+
+  std::vector<std::pair<int, int>>* joints = testCube.findVertJoints();
+
+  return joints;
+}
+
+static void Init_TestRobot(SoftDemo* psim)
+{
+  //set up simulation params
+  psim->m_autocam = true;
+  
+  int numCubes = 2;
+  int divisions = 1;
+  btSoftBody* pcubes [numCubes];
+  for(int i = 0; i < numCubes; i++)
+    {
+      pcubes[i] = OpenMeshCube(psim, divisions);
+	
+      pcubes[i]->generateClusters(64);
+      pcubes[i]->getCollisionShape()->setMargin(0.01);
+
+      pcubes[i]->m_materials[0]->m_kLST	=	0.15;
+      pcubes[i]->m_cfg.kVC		=	100;
+      pcubes[i]->m_cfg.kDP	     	=	0.01;
+      pcubes[i]->m_cfg.kMT	     	=	0;
+      pcubes[i]->setTotalMass(50,true);
+      pcubes[i]->setPose(true,true); 
+
+      pcubes[i]->m_cfg.piterations  =       10;
+      pcubes[i]->m_cfg.collisions   =       btSoftBody::fCollision::CL_SS+
+        btSoftBody::fCollision::CL_RS;
+      pcubes[i]->randomizeConstraints();
+
+      muscleBodys.push_back(pcubes[i]);
+
+      pcubes[i]->translate(btVector3(2*i, 0, 0));
+      psim->getSoftDynamicsWorld()->addSoftBody(pcubes[i]);
+    }
+
+  std::vector<std::pair<int, int>>* joints = OpenMeshCubeJoints(divisions);
+
+  for(int i = 0; i < joints[0].size(); i++)
+    {  
+      VertexJoint* vj = new(btAlignedAlloc(sizeof(VertexJoint),16)) VertexJoint();
+      vj->addVertex(pcubes[0], joints[0][i].first);
+      vj->addVertex(pcubes[1], joints[0][i].second);
+      pcubes[0]->m_joints.push_back(vj);
+    }
+
+  delete[] joints;
+}
+
 //
 // Custom Cube
 //You need to call setPose(...,true) only when you want to use shape matching (kMT), and setPose(true,...) when you want to use pressure forces (kPR) and/or volume conservation forces (kVC).
 static void Init_CustomCube(SoftDemo* pdemo)
 {
-        
+  /*
   btSoftBody* psb1 = OpenMeshCube(pdemo);
   psb1->translate(btVector3(0,0,0));
   psb1->m_cfg.piterations=1;
@@ -385,7 +441,8 @@ static void Init_CustomCube(SoftDemo* pdemo)
   //psb1->m_pose.m_volume -= 20.5;
   //psb1->m_cfg.kPR = 2000;
   pdemo->getSoftDynamicsWorld()->addSoftBody(psb1);
-
+  */  
+  /*
   btSoftBody* psb15 = OpenMeshCube(pdemo);
   psb15->translate(btVector3(0,0,0));
   psb15->m_cfg.piterations=1;
@@ -509,7 +566,7 @@ static void Init_CustomCube(SoftDemo* pdemo)
 
   muscleBodys.push_back(psb6);
   pdemo->getSoftDynamicsWorld()->addSoftBody(psb6);
-  
+  */
   pdemo->m_autocam=true;
 }
 
@@ -517,7 +574,8 @@ static void Init_CustomCube(SoftDemo* pdemo)
 /* Init		*/ 
 void (*demofncs[])(SoftDemo*)=
 {
-  Init_CustomCube
+  Init_CustomCube,
+  Init_TestRobot
 };
 
 void	SoftDemo::clientResetScene()

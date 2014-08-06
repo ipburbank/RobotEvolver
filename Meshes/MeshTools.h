@@ -14,6 +14,9 @@
 #include <OpenMesh/Tools/Subdivider/Uniform/CompositeLoopT.hh>
 #include <OpenMesh/Tools/Subdivider/Uniform/CatmullClarkT.hh>
 
+#include <vector>
+#include <utility>
+
 typedef OpenMesh::TriMesh_ArrayKernelT<> MeshT;
 
 /**
@@ -21,17 +24,19 @@ typedef OpenMesh::TriMesh_ArrayKernelT<> MeshT;
 */
 class MeshTools
 {
-MeshT mesh;
+  MeshT mesh;
 
-public:
-MeshTools(){MeshT mesh;};
-~MeshTools(){};
+ public:
+  MeshTools(){MeshT mesh;};
+  ~MeshTools(){};
 
-std::vector<float> getVertices();
-std::vector<std::array<int, 3>> getFaces();
+  std::vector<float> getVertices();
+  std::vector<std::array<int, 3>> getFaces();
 
-MeshT ctor_cube(); /** Make this mesh a cube */
-MeshT subdivide(float maxEdgeLen); /** Subdivide this mesh */
+  MeshT ctor_cube(); /** Make this mesh a cube */
+  MeshT subdivide(float maxEdgeLen); /** Subdivide this mesh */
+
+  std::vector<std::pair<int, int>>* findVertJoints();
 };
 
 #endif

@@ -115,3 +115,51 @@ MeshT MeshTools::subdivide(float maxEdgeLen)
   
   return mesh;
 }
+
+std::vector<std::pair<int, int>>* MeshTools::findVertJoints()
+{
+  //assumption: mesh is aligned with axes and centered at the origin. Find extents:
+  float maxX = 0, maxY = 0, maxZ = 0;
+  std::vector<std::pair<int, int>>* vertPairs = new std::vector<std::pair<int, int>>[3];
+
+  for (MeshT::VertexIter v_it = mesh.vertices_sbegin(); v_it != mesh.vertices_end(); ++v_it)
+    {
+      maxX = mesh.point(*v_it)[0] > maxX ? mesh.point(*v_it)[0] : maxX;
+      maxY = mesh.point(*v_it)[1] > maxY ? mesh.point(*v_it)[1] : maxY;
+      maxZ = mesh.point(*v_it)[2] > maxZ ? mesh.point(*v_it)[2] : maxZ;
+    }
+  
+  int v_itCnt = 0;
+  for (MeshT::VertexIter v_it = mesh.vertices_sbegin(); v_it != mesh.vertices_end(); ++v_it)
+    {
+      int v_itCnt2 = 0;
+      for (MeshT::VertexIter v_it2 = mesh.vertices_sbegin(); v_it2 != mesh.vertices_end(); ++v_it2)
+        {
+          //shift on x
+          if(
+             mesh.point(*v_it)[0] == mesh.point(*v_it2)[0] + maxX * 2
+             && mesh.point(*v_it)[1] == mesh.point(*v_it2)[1]
+             && mesh.point(*v_it)[2] == mesh.point(*v_it2)[2]
+             ) vertPairs[0].push_back(std::pair<int, int>(v_itCnt, v_itCnt2));
+          
+          //shift on y
+          if(
+             mesh.point(*v_it)[0] == mesh.point(*v_it2)[0]
+             && mesh.point(*v_it)[1] == mesh.point(*v_it2)[1] + maxY * 2
+             && mesh.point(*v_it)[2] == mesh.point(*v_it2)[2]
+             ) vertPairs[1].push_back(std::pair<int, int>(v_itCnt, v_itCnt2));
+
+          //shift on z
+          if(
+             mesh.point(*v_it)[0] == mesh.point(*v_it2)[0]
+             && mesh.point(*v_it)[1] == mesh.point(*v_it2)[1]
+             && mesh.point(*v_it)[2] == mesh.point(*v_it2)[2] + maxZ * 2
+             ) vertPairs[2].push_back(std::pair<int, int>(v_itCnt, v_itCnt2));
+
+
+          v_itCnt2++;
+        }
+      v_itCnt++;
+    }
+  return vertPairs;
+}

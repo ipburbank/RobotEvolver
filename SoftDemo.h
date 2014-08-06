@@ -160,6 +160,7 @@ public:\
 };
 
 MACRO_SOFT_DEMO(0) //Init my demo
+MACRO_SOFT_DEMO(1) //Init robot
 
 
 #endif //CCD_PHYSICS_DEMO_H

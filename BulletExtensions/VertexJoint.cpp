@@ -28,12 +28,20 @@ void VertexJoint::Solve(btScalar dt,btScalar sor)
   
 
   // MOVE EACH VERTEX TO THE AVERAGE POSITION
+  btVector3* vertPosition;
   for(size_t i=0; i<this->m_attachments.size(); i++)
     {
       Attach& at = this->m_attachments[i];
-      
-      at.soft_body->m_nodes[ at.vertex_id ].m_x = averagePosition; //set position
-      at.soft_body->m_nodes[ at.vertex_id ].m_v = btVector3(0,0,0); //no veclocity
-      at.soft_body->m_nodes[ at.vertex_id ].m_f = btVector3(0,0,0); //no force
+
+      //move to weighted average position
+      vertPosition = &at.soft_body->m_nodes[ at.vertex_id ].m_x;
+      printf("pos: %f\n", vertPosition->distance(averagePosition));
+      if(vertPosition->distance(averagePosition) > 0.2){
+        *vertPosition = 0.9 * *vertPosition + 0.1 * averagePosition; //set position
+        /*
+          at.soft_body->m_nodes[ at.vertex_id ].m_v = btVector3(0,0,0); //no veclocity
+          at.soft_body->m_nodes[ at.vertex_id ].m_f = btVector3(0,0,0); //no force
+        */
+      }
     }
 }
