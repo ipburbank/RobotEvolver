@@ -574,7 +574,6 @@ static void Init_CustomCube(SoftDemo* pdemo)
 /* Init		*/ 
 void (*demofncs[])(SoftDemo*)=
 {
-  Init_CustomCube,
   Init_TestRobot
 };
 
