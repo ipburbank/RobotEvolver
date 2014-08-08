@@ -35,13 +35,13 @@ void VertexJoint::Solve(btScalar dt,btScalar sor)
 
       //move to weighted average position
       vertPosition = &at.soft_body->m_nodes[ at.vertex_id ].m_x;
-      printf("pos: %f\n", vertPosition->distance(averagePosition));
-      if(vertPosition->distance(averagePosition) > 0.2){
-        *vertPosition = 0.9 * *vertPosition + 0.1 * averagePosition; //set position
-        /*
+      if(vertPosition->distance(averagePosition) > 0.2)
+        {
+          *vertPosition = 0.5 * *vertPosition + 0.5 * averagePosition; //set position
+        
           at.soft_body->m_nodes[ at.vertex_id ].m_v = btVector3(0,0,0); //no veclocity
           at.soft_body->m_nodes[ at.vertex_id ].m_f = btVector3(0,0,0); //no force
-        */
-      }
+        
+        }
     }
 }

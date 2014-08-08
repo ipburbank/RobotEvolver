@@ -330,7 +330,7 @@ struct	ImplicitSphere : btSoftBody::ImplicitFn
   }
 };
 
-static btSoftBody* OpenMeshCube(SoftDemo* pdemo, int divisions)
+static btSoftBody* OpenMeshCube(SoftDemo* pdemo, float divisions)
 {
   MeshTools testCube;
   testCube.ctor_cube();
@@ -360,7 +360,7 @@ static btSoftBody* OpenMeshCube(SoftDemo* pdemo, int divisions)
 }
 
 
-static std::vector<std::pair<int, int>>* OpenMeshCubeJoints(int divisions)
+static std::vector<std::pair<int, int>>* OpenMeshCubeJoints(float divisions)
 {
   MeshTools testCube;
   testCube.ctor_cube();
@@ -377,7 +377,7 @@ static void Init_TestRobot(SoftDemo* psim)
   psim->m_autocam = true;
   
   int numCubes = 2;
-  int divisions = 1;
+  float divisions = 0.5;
   btSoftBody* pcubes [numCubes];
   for(int i = 0; i < numCubes; i++)
     {
@@ -404,7 +404,7 @@ static void Init_TestRobot(SoftDemo* psim)
       psim->getSoftDynamicsWorld()->addSoftBody(pcubes[i]);
     }
 
-  std::vector<std::pair<int, int>>* joints = OpenMeshCubeJoints(divisions);
+  std::vector<std::pair<int, int>>* joints = OpenMeshCubeJoints(divisions); //
 
   for(int i = 0; i < joints[0].size(); i++)
     {  
