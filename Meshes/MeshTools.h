@@ -15,6 +15,7 @@
 #include <OpenMesh/Tools/Subdivider/Uniform/CatmullClarkT.hh>
 
 #include <vector>
+#include <array>
 #include <utility>
 
 typedef OpenMesh::TriMesh_ArrayKernelT<> MeshT;
