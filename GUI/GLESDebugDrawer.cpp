@@ -1,19 +1,18 @@
+#include "GLESDebugDrawer.h"
 
-#include "GLDebugDrawer.h"
-#include "GLDebugFont.h"
-#include "GlutStuff.h"
-
-
-
-#include <stdio.h> //printf debugging
 GLDebugDrawer::GLDebugDrawer()
 :m_debugMode(0)
 {
-
 }
 
 GLDebugDrawer::~GLDebugDrawer()
 {
+}
+
+void	GLDebugDrawer::init()
+{
+  GLuint program = LoadShader("shader/legacy.vsh", "shader/legacy.fsh");
+  glUseProgram(program);
 }
 
 void	GLDebugDrawer::drawLine(const btVector3& from,const btVector3& to,const btVector3& fromColor, const btVector3& toColor)
@@ -123,8 +122,3 @@ void	GLDebugDrawer::drawContactPoint(const btVector3& pointOnB,const btVector3& 
 
 	}
 }
-
-
-
-
-

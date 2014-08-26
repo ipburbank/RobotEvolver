@@ -12,6 +12,10 @@ subject to the following restrictions:
 2. Altered source versions must be plainly marked as such, and must not be misrepresented as being the original software.
 3. This notice may not be removed or altered from any source distribution.
 */
+
+
+#include <GL/glew.h>
+
 #ifndef GLUT_STUFF_H
 #define GLUT_STUFF_H
 
@@ -69,7 +73,9 @@ subject to the following restrictions:
 
 class DemoApplication;
 
-int glutmain(int argc, char **argv,int width,int height,const char* title,DemoApplication* demoApp);
+int glutinit(int argc, char **argv,int width,int height,const char* title,DemoApplication* demoApp);
+int glutmain();
+
 
 #if defined(BT_USE_DOUBLE_PRECISION)
 #define btglLoadMatrix glLoadMatrixd
