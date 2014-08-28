@@ -99,8 +99,7 @@ public:
 
 	SoftDemo() : m_drag(false)
 	{
-		setTexturing(true);
-		setShadows(true);
+	
 	}
 	virtual ~SoftDemo()
 	{

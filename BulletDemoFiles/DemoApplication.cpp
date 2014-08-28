@@ -27,7 +27,6 @@ subject to the following restrictions:
 #include "BulletCollision/CollisionShapes/btCompoundShape.h"
 #include "BulletCollision/CollisionShapes/btUniformScalingShape.h"
 #include "BulletDynamics/ConstraintSolver/btConstraintSolver.h"
-#include "GL_ShapeDrawer.h"
 #include "LinearMath/btQuickprof.h"
 #include "LinearMath/btDefaultMotionState.h"
 #include "LinearMath/btSerializer.h"
@@ -84,19 +83,12 @@ m_ortho(0),
 m_ShootBoxInitialSpeed(40.f),
 m_stepping(true),
 m_singleStep(false),
-m_idle(false),
+m_idle(false)
 
-m_enableshadows(false),
-m_sundirection(btVector3(1,-2,1)*1000),
-m_defaultContactProcessingThreshold(BT_LARGE_FLOAT)
 {
 #ifndef BT_NO_PROFILE
 	m_profileIterator = CProfileManager::Get_Iterator();
 #endif //BT_NO_PROFILE
-
-	m_shapeDrawer = new GL_ShapeDrawer ();
-	m_shapeDrawer->enableTexture(true);
-	m_enableshadows = false;
 }
 
 
@@ -109,18 +101,8 @@ DemoApplication::~DemoApplication()
 
 	if (m_shootBoxShape)
 		delete m_shootBoxShape;
-
-	if (m_shapeDrawer)
-		delete m_shapeDrawer;
 }
 
-
-void DemoApplication::overrideGLShapeDrawer (GL_ShapeDrawer* shapeDrawer)
-{
-	shapeDrawer->enableTexture (m_shapeDrawer->hasTextureEnabled());
-	delete m_shapeDrawer;
-	m_shapeDrawer = shapeDrawer;
-}
 
 void DemoApplication::myinit(void)
 {
@@ -361,8 +343,6 @@ void DemoApplication::keyboardCallback(unsigned char key, int x, int y)
 	case 'z' : zoomIn(); break;
 	case 'x' : zoomOut(); break;
 	case 'i' : toggleIdle(); break;
-	case 'g' : m_enableshadows=!m_enableshadows;break;
-	case 'u' : m_shapeDrawer->enableTexture(!m_shapeDrawer->enableTexture(false));break;
 	case 'h':
 		if (m_debugMode & btIDebugDraw::DBG_NoHelpText)
 			m_debugMode = m_debugMode & (~btIDebugDraw::DBG_NoHelpText);
@@ -1026,7 +1006,6 @@ btRigidBody*	DemoApplication::localCreateRigidBody(float mass, const btTransform
 	btRigidBody::btRigidBodyConstructionInfo cInfo(mass,myMotionState,shape,localInertia);
 
 	btRigidBody* body = new btRigidBody(cInfo);
-	body->setContactProcessingThreshold(m_defaultContactProcessingThreshold);
 
 #else
 	btRigidBody* body = new btRigidBody(mass,0,shape,localInertia);	
@@ -1217,12 +1196,6 @@ void	DemoApplication::renderscene(int pass)
 
 		if (!(getDebugMode()& btIDebugDraw::DBG_DrawWireframe))
 		{
-			switch(pass)
-			{
-			case	0:	m_shapeDrawer->drawOpenGL(m,colObj->getCollisionShape(),wireColor,getDebugMode(),aabbMin,aabbMax);break;
-			case	1:	m_shapeDrawer->drawShadow(m,m_sundirection*rot,colObj->getCollisionShape(),aabbMin,aabbMax);break;
-			case	2:	m_shapeDrawer->drawOpenGL(m,colObj->getCollisionShape(),wireColor*btScalar(0.3),0,aabbMin,aabbMax);break;
-			}
 		}
 	}
 }
@@ -1236,53 +1209,6 @@ void DemoApplication::renderme()
 
 	if (m_dynamicsWorld)
 	{			
-		if(m_enableshadows)
-		{
-			glClear(GL_STENCIL_BUFFER_BIT);
-			glEnable(GL_CULL_FACE);
-			renderscene(0);
-
-			glDisable(GL_LIGHTING);
-			glDepthMask(GL_FALSE);
-			glDepthFunc(GL_LEQUAL);
-			glEnable(GL_STENCIL_TEST);
-			glColorMask(GL_FALSE,GL_FALSE,GL_FALSE,GL_FALSE);
-			glStencilFunc(GL_ALWAYS,1,0xFFFFFFFFL);
-			glFrontFace(GL_CCW);
-			glStencilOp(GL_KEEP,GL_KEEP,GL_INCR);
-			renderscene(1);
-			glFrontFace(GL_CW);
-			glStencilOp(GL_KEEP,GL_KEEP,GL_DECR);
-			renderscene(1);
-			glFrontFace(GL_CCW);
-
-			glPolygonMode(GL_FRONT,GL_FILL);
-			glPolygonMode(GL_BACK,GL_FILL);
-			glShadeModel(GL_SMOOTH);
-			glEnable(GL_DEPTH_TEST);
-			glDepthFunc(GL_LESS);
-			glEnable(GL_LIGHTING);
-			glDepthMask(GL_TRUE);
-			glCullFace(GL_BACK);
-			glFrontFace(GL_CCW);
-			glEnable(GL_CULL_FACE);
-			glColorMask(GL_TRUE,GL_TRUE,GL_TRUE,GL_TRUE);
-
-			glDepthFunc(GL_LEQUAL);
-			glStencilFunc( GL_NOTEQUAL, 0, 0xFFFFFFFFL );
-			glStencilOp( GL_KEEP, GL_KEEP, GL_KEEP );
-			glDisable(GL_LIGHTING);
-			renderscene(2);
-			glEnable(GL_LIGHTING);
-			glDepthFunc(GL_LESS);
-			glDisable(GL_STENCIL_TEST);
-			glDisable(GL_CULL_FACE);
-		}
-		else
-		{
-			glDisable(GL_CULL_FACE);
-			renderscene(0);
-		}
 
 		int	xOffset = 10;
 		int yStart = 20;

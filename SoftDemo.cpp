@@ -32,7 +32,6 @@
 #include "BulletSoftBody/btSoftBodyHelpers.h"
 
 #include "SoftDemo.h"
-#include "BulletDemoFiles/GL_ShapeDrawer.h"
 #include "BulletDemoFiles/GLDebugFont.h"
 #include "BulletDemoFiles/GlutStuff.h"
 

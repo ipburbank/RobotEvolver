@@ -23,7 +23,7 @@ void	GLDebugDrawer::drawLine(const btVector3& from,const btVector3& to,const btV
 		glVertex3d(from.getX(), from.getY(), from.getZ());
 		glColor3f(toColor.getX(), toColor.getY(), toColor.getZ());
 		glVertex3d(to.getX(), to.getY(), to.getZ());
-	glEnd();
+                glEnd();
 }
 
 void	GLDebugDrawer::drawLine(const btVector3& from,const btVector3& to,const btVector3& color)
@@ -71,7 +71,7 @@ void GLDebugDrawer::drawSphere (const btVector3& p, btScalar radius, const btVec
 
 void	GLDebugDrawer::drawTriangle(const btVector3& a,const btVector3& b,const btVector3& c,const btVector3& color,btScalar alpha)
 {
-//	if (m_debugMode > 0)
+	
 	{
 		const btVector3	n=btCross(b-a,c-a).normalized();
 		glBegin(GL_TRIANGLES);		

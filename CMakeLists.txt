@@ -8,7 +8,7 @@ cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O2 -s LEGACY_GL_EMULATION=1")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O2")
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -Wall -g")
 
 #bullet
@@ -32,36 +32,14 @@ add_subdirectory(BulletExtensions)
 add_subdirectory(Meshes)
 
 
-add_executable(softapp.html main.cpp SoftDemo.cpp)
+add_executable(softapp main.cpp SoftDemo.cpp)
 #make shared
-target_link_libraries(softapp.html MeshTools BulletDemoFiles BulletExtensions BulletSoftBody BulletDynamics BulletCollision LinearMath OpenMeshCore OpenMeshTools)
+target_link_libraries(softapp MeshTools BulletDemoFiles BulletExtensions BulletSoftBody BulletDynamics BulletCollision LinearMath OpenMeshCore OpenMeshTools)
 
 #system libraries
-#target_link_libraries(softapp -lglut)
-#target_link_libraries(softapp -lGL)
-#target_link_libraries(softapp -lGLU)
-
-#regal
-# set the output destination
-set(REGAL_LIBRARY ${CMAKE_CURRENT_SOURCE_DIR}/Libraries/regal/lib/emscripten/libRegallib.a)
-# create a custom target that is part of ALL
-# and will run each time you type make 
-add_custom_target(build_regal ALL 
-                   COMMAND make -f Makefile STRIP= MODE=debug SYSTEM=emscripten -j8
-                   WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/Libraries/regal
-                   COMMENT "make regal")
-
-# now create an imported static target
-add_library(regal STATIC IMPORTED)
-# Import target "scintilla" for configuration ""
-set_property(TARGET regal APPEND PROPERTY IMPORTED_CONFIGURATIONS NOCONFIG)
-set_target_properties(regal PROPERTIES
-  IMPORTED_LOCATION_NOCONFIG "${REGAL_LIBRARY}")
-
-# now you can use scintilla as if it were a regular cmake built target in your project
-add_dependencies(regal build_regal)
-
-target_link_libraries(softapp.html regal)
+target_link_libraries(softapp -lglut)
+target_link_libraries(softapp -lGL)
+target_link_libraries(softapp -lGLU)
 
 # add a target to generate API documentation with Doxygen
 find_package(Doxygen)

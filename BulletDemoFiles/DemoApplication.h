@@ -18,7 +18,6 @@ subject to the following restrictions:
 
 
 #include "GlutStuff.h"
-#include "GL_ShapeDrawer.h"
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -101,10 +100,6 @@ protected:
 	void showProfileInfo(int& xOffset,int& yStart, int yIncr);
 	void renderscene(int pass);
 
-	GL_ShapeDrawer*	m_shapeDrawer;
-	bool			m_enableshadows;
-	btVector3		m_sundirection;
-	btScalar		m_defaultContactProcessingThreshold;
 
 public:
 		
@@ -124,22 +119,10 @@ public:
 
 	}
 
-	void overrideGLShapeDrawer (GL_ShapeDrawer* shapeDrawer);
 	
 	void setOrthographicProjection();
 	void resetPerspectiveProjection();
 	
-	bool	setTexturing(bool enable) { return(m_shapeDrawer->enableTexture(enable)); }
-	bool	setShadows(bool enable)	{ bool p=m_enableshadows;m_enableshadows=enable;return(p); }
-	bool	getTexturing() const
-	{
-		return m_shapeDrawer->hasTextureEnabled();
-	}
-	bool	getShadows() const
-	{
-		return m_enableshadows;
-	}
-
 
 	int		getDebugMode()
 	{
