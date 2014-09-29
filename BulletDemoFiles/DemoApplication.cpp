@@ -107,36 +107,6 @@ DemoApplication::~DemoApplication()
 void DemoApplication::myinit(void)
 {
 
-	GLfloat light_ambient[] = { btScalar(0.2), btScalar(0.2), btScalar(0.2), btScalar(1.0) };
-	GLfloat light_diffuse[] = { btScalar(1.0), btScalar(1.0), btScalar(1.0), btScalar(1.0) };
-	GLfloat light_specular[] = { btScalar(1.0), btScalar(1.0), btScalar(1.0), btScalar(1.0 )};
-	/*	light_position is NOT default value	*/
-	GLfloat light_position0[] = { btScalar(1.0), btScalar(10.0), btScalar(1.0), btScalar(0.0 )};
-	GLfloat light_position1[] = { btScalar(-1.0), btScalar(-10.0), btScalar(-1.0), btScalar(0.0) };
-        /*
-	glLightfv(GL_LIGHT0, GL_AMBIENT, light_ambient);
-	glLightfv(GL_LIGHT0, GL_DIFFUSE, light_diffuse);
-	glLightfv(GL_LIGHT0, GL_SPECULAR, light_specular);
-	glLightfv(GL_LIGHT0, GL_POSITION, light_position0);
-
-	glLightfv(GL_LIGHT1, GL_AMBIENT, light_ambient);
-	glLightfv(GL_LIGHT1, GL_DIFFUSE, light_diffuse);
-	glLightfv(GL_LIGHT1, GL_SPECULAR, light_specular);
-	glLightfv(GL_LIGHT1, GL_POSITION, light_position1);
-        */
-	glEnable(GL_LIGHTING);
-	glEnable(GL_LIGHT0);
-	glEnable(GL_LIGHT1);
-
-
-	glShadeModel(GL_SMOOTH);
-	glEnable(GL_DEPTH_TEST);
-	glDepthFunc(GL_LESS);
-
-	glClearColor(btScalar(0.7),btScalar(0.7),btScalar(0.7),btScalar(0));
-
-	//  glEnable(GL_CULL_FACE);
-	//  glCullFace(GL_BACK);
 }
 
 
@@ -1215,35 +1185,11 @@ void DemoApplication::renderme()
 		int yIncr = 20;
 
 
-		glDisable(GL_LIGHTING);
-		glColor3f(0, 0, 0);
-
 		if ((m_debugMode & btIDebugDraw::DBG_NoHelpText)==0)
 		{
 			setOrthographicProjection();
 
 			showProfileInfo(xOffset,yStart,yIncr);
-
-#ifdef USE_QUICKPROF
-
-		
-			if ( getDebugMode() & btIDebugDraw::DBG_ProfileTimings)
-			{
-				static int counter = 0;
-				counter++;
-				std::map<std::string, hidden::ProfileBlock*>::iterator iter;
-				for (iter = btProfiler::mProfileBlocks.begin(); iter != btProfiler::mProfileBlocks.end(); ++iter)
-				{
-					char blockTime[128];
-					sprintf(blockTime, "%s: %lf",&((*iter).first[0]),btProfiler::getBlockTime((*iter).first, btProfiler::BLOCK_CYCLE_SECONDS));//BLOCK_TOTAL_PERCENT));
-					glRasterPos3f(xOffset,yStart,0);
-					GLDebugDrawString(BMF_GetFont(BMF_kHelvetica10),blockTime);
-					yStart += yIncr;
-
-				}
-
-			}
-#endif //USE_QUICKPROF
 
 
 			
@@ -1251,7 +1197,6 @@ void DemoApplication::renderme()
 			resetPerspectiveProjection();
 		}
 
-		glDisable(GL_LIGHTING);
 
 
 	}

@@ -15,11 +15,11 @@
 
 #include "SoftDemo.h"
 #include "BulletDemoFiles/GlutStuff.h"
-#include "BulletDemoFiles/GLDebugDrawer.h"
+#include "GUI/GLESDebugDrawer.h"
 #include "btBulletDynamicsCommon.h"
 
 
-GLDebugDrawer	gDebugDrawer;
+GLESDebugDrawer	gDebugDrawer;
 
 int main(int argc,char** argv)
 {

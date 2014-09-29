@@ -28,13 +28,13 @@ add_subdirectory(Libraries/OpenMesh)
 
 #libraries
 add_subdirectory(BulletExtensions)
-
+add_subdirectory(GUI)
 add_subdirectory(Meshes)
 
 
 add_executable(softapp main.cpp SoftDemo.cpp)
 #make shared
-target_link_libraries(softapp MeshTools BulletDemoFiles BulletExtensions BulletSoftBody BulletDynamics BulletCollision LinearMath OpenMeshCore OpenMeshTools)
+target_link_libraries(softapp MeshTools GUI BulletDemoFiles BulletExtensions BulletSoftBody BulletDynamics BulletCollision LinearMath OpenMeshCore OpenMeshTools)
 
 #system libraries
 target_link_libraries(softapp -lglut)

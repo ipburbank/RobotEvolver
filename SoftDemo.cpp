@@ -370,10 +370,25 @@ static std::vector<std::pair<int, int>>* OpenMeshCubeJoints(float divisions)
   return joints;
 }
 
+static void Ctor_LinearStair(SoftDemo* pdemo,const btVector3& org,const btVector3& sizes,btScalar angle,int count)
+{
+        btBoxShape*     shape=new btBoxShape(sizes);
+        for(int i=0;i<count;++i)
+        {
+                btTransform startTransform;
+                startTransform.setIdentity();
+                startTransform.setOrigin(org+btVector3(sizes.x()*i*2,sizes.y()*i*2,0));
+                btRigidBody* body=pdemo->localCreateRigidBody(0,startTransform,shape);
+                body->setFriction(1);
+        }
+}
+
 static void Init_TestRobot(SoftDemo* psim)
 {
   //set up simulation params
   psim->m_autocam = true;
+
+  Ctor_LinearStair(psim,btVector3(0,0,0),btVector3(2,1,5),0,10);
   
   int numCubes = 2;
   float divisions = 0.5;
